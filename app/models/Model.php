@@ -1,15 +1,18 @@
 <?php
-class Model{
+class Model
+{
   private $db;
-  function __construct(){
-    $this->db= new PDO('mysql:host=localhost;'.'dbname=liga;charset=utf8', 'root', '');
+  function __construct()
+  {
+    $this->db = new PDO('mysql:host=localhost;' . 'dbname=liga;charset=utf8', 'root', '');
   }
 
-  public function getAllLigas($liga){ //trae todo en liga, para mostrarlas por pantalla (el parametro q se va a pasar va a ser $liga)
+  public function getAllLigas()
+  { //trae todo en liga, para mostrarlas por pantalla (el parametro q se va a pasar va a ser $liga)
     $query = $this->db->prepare('SELECT * FROM ligas ORDER BY liga ASC');
-    $query->execute([$liga]);
+    $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);
-  } 
+  }
 
   // public function get_team(){
   //  $query = $this->$db->prepare('SELECT e.id_equipo, e.logo, e.historiaEq, e.jugadores FROM equipos AS e');
@@ -24,4 +27,3 @@ class Model{
   //  return $equipo;    
   // }
 }
-?>

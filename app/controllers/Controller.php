@@ -4,24 +4,41 @@ require_once './app/views/View.php';
 
 //toda secuencia de comandos empieza por aca, sigue por el model(a veces) y despues view (a veces)
 
-class Controller {
+class Controller
+{
   private $model;
   private $view;
 
   public function __construct()
   {
-    $this->model=new Model();
-    $this->view=new View();
+    $this->model = new Model();
+    $this->view = new View();
+  }
+  public function taskShowHome()
+  {
+    $this->view->showHome();
   }
 
-public function showLigas($liga){
-  $ligas = $this->model->getAllLigas($liga);
-  if(!empty($ligas)){
-    $this->view->showLiga($ligas);
+  public function showTeamsInThisLeague($equipos)
+  {
+
   }
-  // else{
-  //   $this->view->showError($mensaje);
-  // }
+  public function showHistory($historia)
+  {
+
+  }
+  
+
+
+
+  public function showLigas()
+  {
+    $ligas = $this->model->getAllLigas();
+    if (!empty($ligas)) {
+      $this->view->showLiga($ligas);
+    }
+    // else{
+    //   $this->view->showError($mensaje);
+    // }
+  }
 }
-}
-?>
