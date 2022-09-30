@@ -1,5 +1,20 @@
-<?php
+<?php 
+//require_once SMARTY (mas adelante va a ir esto)
 class View{
+    //private $smarty;
+    public function __construct() {
+     //$this->smarty = new Smarty();   
+    }
+    public function showLiga($ligas){
+        foreach ($ligas as $ligass) {
+
+            echo '<li>' . $ligass->liga .'</li>';
+         
+        }
+    }
+    // public function showError($mensaje){
+    // $mensaje ="error";
+    // }
 
 
   
