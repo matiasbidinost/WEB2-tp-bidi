@@ -23,17 +23,16 @@ switch ($param[0]) {
     case 'league':
         $taskController->showLigas();
         break;
-
     case 'teams':
-        $taskController->showTeamsInThisLeague($params[1]); //showTeamsInThisLeague que muestre solo una liga en el param 1 (especifica)
+        $taskController->showTeamsInThisLeague($param[1]); //showTeamsInThisLeague que muestre solo una liga en el param 1 (especifica)
         break;
 
     case 'history':
-        $taskController->showHistory($params[1]); //showHistory muestra historia
+        $taskController->showHistory($param[1]); //showHistory muestra historia
         break;
 
     case 'stats':
-        $taskController->showStats($params[1]); //showStats muestra las records y estadisticas
+        $taskController->showStats($param[1]); //showStats muestra las records y estadisticas
         break;
 
     default:

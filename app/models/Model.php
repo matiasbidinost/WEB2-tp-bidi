@@ -14,12 +14,12 @@ class Model
     return $query->fetchAll(PDO::FETCH_OBJ);
   }
 
-  // public function get_team(){
-  //  $query = $this->$db->prepare('SELECT e.id_equipo, e.logo, e.historiaEq, e.jugadores FROM equipos AS e');
-  //  $query->execute();
-  //  $equipo = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
-  //  return $equipo;
-  // }
+   public function get_teams(){
+    $query = $this->db->prepare('SELECT * FROM equipos ORDER BY equipo ASC');
+    $query->execute();
+    $equipo = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
+    return $equipo;
+   }
   // public function get_one_team($id){
   //  $query = $this->$db->prepare('SELECT e.id_equipo, e.logo, e.historiaEq, e.jugadores FROM equipos AS e WHERE e.id_equipo=?');
   //  $query->execute([$id]);

@@ -13,4 +13,6 @@ inclui un router, agrege tambien un templates para los estilos (calculo que el s
 -solucione rutas del router ahora si pones la pagina /home muestra la palabra home, si pones /league te aparecen  las ligas
 -mejore codigo del model (que estaba mal la linea q hice yo)
 -falta hacer una sesionController, sesionModel, sesionView para q el usuario cambie codigo si es admin 
-
+-hacer un javascript para recibir el $_POST del usuario que ingrese a la session
+- tabla:
+----id_liga es foreing key e id y eso referencia a un id_fk en equipo que tiene q tener un id separado

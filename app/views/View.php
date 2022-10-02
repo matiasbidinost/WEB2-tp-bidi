@@ -20,6 +20,11 @@ class View
     // public function showError($mensaje){
     // $mensaje ="error";
     // }
+    public function showTeam($equipos){
+        foreach ($equipos as $equiposs) {
+            echo '<li>' . $equiposs . '</li>';
+        }
+    }
 
 
 

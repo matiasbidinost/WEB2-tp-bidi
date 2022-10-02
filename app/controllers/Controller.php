@@ -21,9 +21,16 @@ class Controller
 
   public function showTeamsInThisLeague($equipos)
   {
-
+    $equipos = $this->model->get_teams();
+    if (!empty($equipos)){
+      $this->view->showTeam($equipos);
+    }
   }
   public function showHistory($historia)
+  {
+
+  }
+  public function showStats($statsRecord)
   {
 
   }
