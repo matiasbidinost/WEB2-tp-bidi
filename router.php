@@ -1,6 +1,6 @@
 <?php
-require_once './app/controllers/Controller.php';
-
+require_once './app/controllers/LeagueController.php';
+require_once './app/controllers/TeamController.php';
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
 // lee la acción
@@ -13,30 +13,30 @@ if (!empty($_GET['action'])) { //si no se escribe home, entra igual al home (tod
 
 }
 $param = explode('/', $action);
-$taskController = new Controller();
-
+$LeagueController = new LeagueController();
+$teamController = new TeamController();
 switch ($param[0]) {
     case 'home':
-        $taskController->taskShowHome(); //me falta crear un showhome muestra la pagina de inicio
+        $LeagueController->ShowHome(); //me falta crear un showhome muestra la pagina de inicio
         break;
 
     case 'league':
-        $taskController->showLigas();
+        $LeagueController->showLeague();
         break;
-    case 'teams':
-        $taskController->showTeamsInThisLeague($param[1]); //showTeamsInThisLeague que muestre solo una liga en el param 1 (especifica)
-        break;
+    // case 'teams':
+    //     $taskController->showTeamsInThisLeague($param[1]); //showTeamsInThisLeague que muestre solo una liga en el param 1 (especifica)
+    //     break;
 
-    case 'history':
-        $taskController->showHistory($param[1]); //showHistory muestra historia
-        break;
+    // case 'history':
+    //     $taskController->showHistory($param[1]); //showHistory muestra historia
+    //     break;
 
-    case 'stats':
-        $taskController->showStats($param[1]); //showStats muestra las records y estadisticas
-        break;
+    // case 'stats':
+    //     $taskController->showStats($param[1]); //showStats muestra las records y estadisticas
+    //     break;
 
     default:
-        echo "404 not found";
+        echo "Error 404 not found";
         # code...
         break;
 }

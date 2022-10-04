@@ -1,6 +1,6 @@
 <?php
 //require_once SMARTY (mas adelante va a ir esto)
-class View
+class LeagueView
 {
     //private $smarty;
     public function __construct()
@@ -20,11 +20,6 @@ class View
     // public function showError($mensaje){
     // $mensaje ="error";
     // }
-    public function showTeam($equipos){
-        foreach ($equipos as $equiposs) {
-            echo '<li>' . $equiposs . '</li>';
-        }
-    }
 
 
 
