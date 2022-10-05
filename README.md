@@ -28,7 +28,7 @@ Funciona correctamente muestra la liga con MVC en pantalla, en localhost/web2/le
 funciona bien showteams, ahora tambien si pones en el link url/league/1 te muestra todos los equipos de id 1 de league
 
 ----siguientes pasos---
--templates- agregar un footer.php, un form.php, un <ul> con un href a liga, y otro con href a team (mirar viewTeam y viewLeague)//basicamente ahora se muestraa la lista,en showLeague, hacer q esa lista sea un boton que redirija hacia un id de liga
+-templates- agregar un footer.php, un form.php(formulario con usuario, email, contraseña, confirContra)(podriamos ponerlo en el header directamente), un <ul> con un href a liga, y otro con href a team (mirar viewTeam y viewLeague)//basicamente ahora se muestraa la lista,en showLeague, hacer q esa lista sea un boton que redirija hacia un id de liga
 -crear un model, view y controller con nombre de AdminContr....
 -intentar que cuando clikeo en una liga me redirija a los equipos que hay en ella
 -una vez q los botones funcionan aplicar smarty
