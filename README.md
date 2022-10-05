@@ -33,3 +33,6 @@ funciona bien showteams, ahora tambien si pones en el link url/league/1 te muest
 -intentar que cuando clikeo en una liga me redirija a los equipos que hay en ella
 -una vez q los botones funcionan aplicar smarty
 -crear un boton q elimine, agregue o edite laguna liga o team (esto creo q todavia no lo vimos)
+
+05/10/22 (TODAVIA FALTA POR TERMINAR) Juan
+Estoy continuando con smarty, me falta todavía pero estoy en proceso je

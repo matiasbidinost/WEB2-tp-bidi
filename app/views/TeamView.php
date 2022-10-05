@@ -1,12 +1,7 @@
     <?php
-    //require_once SMARTY (mas adelante va a ir esto)
+require_once('libs/Smarty.class.php');
     class TeamView
     {
-        //private $smarty;
-        public function __construct()
-        {
-            //$this->smarty = new Smarty();   
-        }
         public function showHome()
         {
             echo "home";
