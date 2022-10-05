@@ -17,15 +17,20 @@ $leagueController = new LeagueController();
 $teamController = new TeamController();
 switch ($param[0]) {
     case 'home':
-        $leagueController->showHome(); 
+        $leagueController->showHome();
         break;
 
     case 'league':
-        $leagueController->showLeague(); 
+        $leagueController->showLeague();
 
-        $leagueController->showTeamsInThisLeague($param[1]);
+
+
+        if ($param[0] == 'league') {
+            if (isset($param[1])) {
+                $leagueController->showTeamsInThisLeague($param[1]);
+            }
+        }
         break;
-
     case 'teams':
         $teamController->showTeams();
         break;
