@@ -39,3 +39,4 @@ agreguee stats, record e history, aunque todavia no estan funcionales
 
 05/10/22 (TODAVIA FALTA POR TERMINAR) Juan
 Estoy continuando con smarty, me falta todavía pero estoy en proceso je
+Debo continuar con smarty, todavía no está terminado. :(
