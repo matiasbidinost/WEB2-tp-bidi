@@ -1,14 +1,10 @@
 <?php
-//require_once SMARTY (mas adelante va a ir esto)
+require_once ('libs/Smarty.class.php');
+
 class LeagueView
 {
-    //private $smarty;
-    public function __construct()
-    {
-        //$this->smarty = new Smarty();   
-    }
     public function showHome(){
-        require_once './templates/header.php';
+        require_once './templates/header.tpl';
     }
     public function showLiga($ligas)
     {

@@ -20,7 +20,7 @@ class TeamController
   {
     $equipos = $this->teamModel->get_teams();
     if (!empty($equipos)){
-      $this->TeamView->showTeam($equipos);
+      $this->teamView->showTeam($equipos);
     }
 }
 }

@@ -29,7 +29,9 @@ switch ($param[0]) {
     case 'teams':
         $teamController->showTeams();
         break;
-
+    case 'login.php':
+        $adminController->showLogin();
+        break;
 
         // case 'history':
         //     $taskController->showHistory($param[1]); //showHistory muestra historia
