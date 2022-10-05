@@ -32,4 +32,18 @@ class LeagueController
       $this->leagueView->showTeam($equipos);
     }
   }
+  public function showHistory($history)
+  {
+    $historyLeague = $this->leagueModel->get_league_history($history);
+    if (!empty($equipos)) {
+      $this->leagueView->show_History($historyLeague);
+    }
+  }
+  public function showStats($record)
+  {
+    $stats = $this->leagueModel->get_record($record);
+    if (!empty($equipos)) {
+      $this->leagueView->showRecords($stats);
+    }
+  }
 }

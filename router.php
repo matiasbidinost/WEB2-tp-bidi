@@ -22,26 +22,23 @@ switch ($param[0]) {
 
     case 'league':
         $leagueController->showLeague();
-
-
-
         if ($param[0] == 'league') {
             if (isset($param[1])) {
                 $leagueController->showTeamsInThisLeague($param[1]);
+                if (isset($param[1]) == 'history') {
+
+                    $LeagueController->showHistory($param[1]); //showHistory muestra historia
+
+                }
+                if (isset($param[1]) == 'stats') {
+                    $LeagueController->showStats($param[1]); //showStats muestra las records y estadisticas
+                }
             }
         }
         break;
     case 'teams':
         $teamController->showTeams();
         break;
-
-        // case 'history':
-        //     $taskController->showHistory($param[1]); //showHistory muestra historia
-        //     break;
-
-        // case 'stats':
-        //     $taskController->showStats($param[1]); //showStats muestra las records y estadisticas
-        //     break;
 
     default:
         echo "Error 404 not found";

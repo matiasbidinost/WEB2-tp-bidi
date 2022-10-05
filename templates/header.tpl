@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="footer.php">
     <meta charset="UTF-8">
     <base href="<?php echo BASE_URL ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
