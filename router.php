@@ -13,27 +13,31 @@ if (!empty($_GET['action'])) { //si no se escribe home, entra igual al home (tod
 
 }
 $param = explode('/', $action);
-$LeagueController = new LeagueController();
+$leagueController = new LeagueController();
 $teamController = new TeamController();
 switch ($param[0]) {
     case 'home':
-        $LeagueController->ShowHome(); //me falta crear un showhome muestra la pagina de inicio
+        $leagueController->showHome(); 
         break;
 
     case 'league':
-        $LeagueController->showLeague();
+        $leagueController->showLeague(); 
+
+        $leagueController->showTeamsInThisLeague($param[1]);
         break;
-    // case 'teams':
-    //     $taskController->showTeamsInThisLeague($param[1]); //showTeamsInThisLeague que muestre solo una liga en el param 1 (especifica)
-    //     break;
 
-    // case 'history':
-    //     $taskController->showHistory($param[1]); //showHistory muestra historia
-    //     break;
+    case 'teams':
+        $teamController->showTeams();
+        break;
 
-    // case 'stats':
-    //     $taskController->showStats($param[1]); //showStats muestra las records y estadisticas
-    //     break;
+
+        // case 'history':
+        //     $taskController->showHistory($param[1]); //showHistory muestra historia
+        //     break;
+
+        // case 'stats':
+        //     $taskController->showStats($param[1]); //showStats muestra las records y estadisticas
+        //     break;
 
     default:
         echo "Error 404 not found";

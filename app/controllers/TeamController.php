@@ -11,20 +11,14 @@ class TeamController
 
   public function __construct()
   {
-    $this->TeamModel = new TeamModel();
-    $this->TeamView = new TeamView();
+    $this->teamModel = new TeamModel();
+    $this->teamView = new TeamView();
   }
   
-  // public function showTeamsInThisLeague($equipos)
-  // {
-  //   $equipos = $this->TeamModel->get_teams();
-  //   if (!empty($equipos)){
-  //     $this->TeamView->showTeam($equipos);
-  //   }
 
-    public function showTeams()
+  public function showTeams()
   {
-    $equipos = $this->TeamModel->get_teams();
+    $equipos = $this->teamModel->get_teams();
     if (!empty($equipos)){
       $this->TeamView->showTeam($equipos);
     }

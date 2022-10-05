@@ -11,25 +11,25 @@ class LeagueController
 
   public function __construct()
   {
-    $this->LeagueModel = new LeagueModel();
-    $this->LeagueView = new LeagueView();
+    $this->leagueModel = new LeagueModel();
+    $this->leagueView = new LeagueView();
   }
-    public function ShowHome()
+  public function showHome()
   {
-    $this->LeagueView->showHome();
+    $this->leagueView->showHome();
   }
   public function showLeague()
   {
-    $ligas = $this->LeagueModel->getAllLigas();
+    $ligas = $this->leagueModel->getAllLigas();
     if (!empty($ligas)) {
-      $this->LeagueView->showLiga($ligas);
+      $this->leagueView->showLiga($ligas);
     }
   }
-  //   public function showTeamsInThisLeague($equipos)
-  // {
-  //   $equipos = $this->model->get_teams();
-  //   if (!empty($equipos)){
-  //     $this->view->showTeam($equipos);
-  //   }
-  // }
+  public function showTeamsInThisLeague($id_liga)
+  {
+    $equipos = $this->leagueModel->get_team_by_league($id_liga);
+    if (!empty($equipos)) {
+      $this->leagueView->showTeam($equipos);
+    }
+  }
 }

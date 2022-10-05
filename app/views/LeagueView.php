@@ -8,13 +8,20 @@ class LeagueView
         //$this->smarty = new Smarty();   
     }
     public function showHome(){
-        echo "home";
+        require_once './templates/header.php';
     }
     public function showLiga($ligas)
     {
         foreach ($ligas as $ligass) {
 
             echo '<li>' . $ligass->liga . '</li>';
+        }
+    }
+    public function showTeam($equipos)
+    {
+        foreach ($equipos as $equiposs) {
+
+            echo '<li>' . $equiposs->nombre . '</li>';
         }
     }
     // public function showError($mensaje){

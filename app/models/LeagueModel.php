@@ -5,11 +5,18 @@ class LeagueModel
   function __construct()
   {
     $this->db = new PDO('mysql:host=localhost;' . 'dbname=liga;charset=utf8', 'root', '');
-  }   
+  }
   public function getAllLigas()
   { //trae todo en liga, para mostrarlas por pantalla (el parametro q se va a pasar va a ser $liga)
     $query = $this->db->prepare('SELECT * FROM ligas ORDER BY liga ASC');
     $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);
   }
+  public function get_team_by_league($id_liga)
+  {
+    $query = $this->db->prepare('SELECT * FROM `equipos` WHERE `id_fk-liga`=?');
+    $query->execute([$id_liga]);
+    $equipo = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
+    return $equipo;
   }
+}
