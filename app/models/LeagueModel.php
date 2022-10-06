@@ -19,4 +19,11 @@ class LeagueModel
     $equipo = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
     return $equipo;
   }
+  public function get_league_history($historia)
+  {
+    $query = $this->db->prepare('SELECT * FROM `ligas` WHERE `idLiga`=?');
+    $query->execute([$historia]);
+    $liga = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
+    return $liga;
+  }
 }

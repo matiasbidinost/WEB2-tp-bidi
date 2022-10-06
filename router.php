@@ -21,18 +21,19 @@ switch ($param[0]) {
         break;
 
     case 'league':
+        
         $leagueController->showLeague();
-        if ($param[0] == 'league') {
-            if (isset($param[1])) {
-                $leagueController->showTeamsInThisLeague($param[1]);
-                if (isset($param[1]) == 'history') {
+        if (isset($param[1])) { 
+            if (isset($param[2])) {
+                if ($param[2] == 'history') {//url/league/history
 
-                    $LeagueController->showHistory($param[1]); //showHistory muestra historia
-
+                    $leagueController->showHistory($param[1]); //showHistory muestra historia
+                } else if ($param[2] == 'stats') {
+                    //$leagueController->showStats($param[1]); //showStats muestra las records y estadisticas
+                    echo "aqui llego bala1";
                 }
-                if (isset($param[1]) == 'stats') {
-                    $LeagueController->showStats($param[1]); //showStats muestra las records y estadisticas
-                }
+            } else if (intval($param[1])) {
+                $leagueController->showTeamsInThisLeague($param[1]); //league que un id....url/league/1
             }
         }
         break;

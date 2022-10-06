@@ -22,6 +22,7 @@ class LeagueController
   {
     $ligas = $this->leagueModel->getAllLigas();
     if (!empty($ligas)) {
+      $this->leagueView->showHome();
       $this->leagueView->showLiga($ligas);
     }
   }
@@ -35,7 +36,7 @@ class LeagueController
   public function showHistory($history)
   {
     $historyLeague = $this->leagueModel->get_league_history($history);
-    if (!empty($equipos)) {
+    if (!empty($historyLeague)) {
       $this->leagueView->show_History($historyLeague);
     }
   }

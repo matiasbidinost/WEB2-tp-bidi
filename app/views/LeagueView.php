@@ -10,7 +10,7 @@ class LeagueView
     {
         foreach ($ligas as $ligass) {
 
-            echo '<li>' . $ligass->liga . '</li>';
+            echo '<li><a href = "league/1">' . $ligass->liga . '</a></li>';
         }
     }
     public function showTeam($equipos)
@@ -20,6 +20,15 @@ class LeagueView
             echo '<li>' . $equiposs->nombre . '</li>';
         }
     }
+    public function show_History($historyLeague)
+    {
+
+            foreach ($historyLeague as $historiaL) {
+
+                echo '<a>' . $historiaL->historia . '</a>';
+            }
+    }
+
     // public function showError($mensaje){
     // $mensaje ="error";
     // }
