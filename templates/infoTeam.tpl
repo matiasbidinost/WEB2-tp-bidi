@@ -1,0 +1,1 @@
+//informacion del equipo, historia, logo, nombre y miembros

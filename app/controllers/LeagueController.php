@@ -17,6 +17,10 @@ class LeagueController
   public function showHome()
   {
     $this->leagueView->showHome();
+    
+  }
+  public function showForm(){
+    $this->leagueView->showForm();
   }
   public function showLeague()
   {

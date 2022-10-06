@@ -7,11 +7,17 @@ class LeagueView
       $smarty = new Smarty();
       $smarty->display('templates/header.tpl'); // muestro el template        
     }
+    public function showForm(){
+      $smarty = new Smarty();
+      $smarty->display('templates/form.tpl');
+    }
     public function showLiga($ligas)
     {
         foreach ($ligas as $ligass) {
 
-            echo '<li><a href = "league/1">' . $ligass->liga . '</a></li>';
+            echo '<a href = "league/'.$ligass->idLiga.'">' . $ligass->liga . '</a>';
+            echo '<img width="100" height="50" src= "' . $ligass->logo . '"></img>';
+            echo '<br>';
         }
     }
     public function showTeam($equipos)

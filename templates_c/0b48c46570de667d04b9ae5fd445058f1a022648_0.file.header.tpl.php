@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-06 03:36:09
+/* Smarty version 4.2.1, created on 2022-10-06 21:13:53
   from 'C:\xampp\htdocs\WEB2-tp-bidi\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633e31095a4f13_96214906',
+  'unifunc' => 'content_633f28f100a9c5_25253538',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b48c46570de667d04b9ae5fd445058f1a022648' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2-tp-bidi\\templates\\header.tpl',
-      1 => 1665019891,
+      1 => 1665083343,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_633e31095a4f13_96214906 (Smarty_Internal_Template $_smarty_tpl) {
+function content_633f28f100a9c5_25253538 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <base href="<?php echo '<?php'; ?>
  echo BASE_URL <?php echo '?>'; ?>
@@ -53,20 +53,7 @@ function content_633e31095a4f13_96214906 (Smarty_Internal_Template $_smarty_tpl)
             </div>
           </nav>
     </header>
-    <form id="form-login" action="login.php" method="POST">
-      <div>
-        <label for="email" class="form-label">email</label>
-        <input type="email" class="form-control" id="email" name="email" />
-      </div>
-      <div>
-        <label for="password" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          name="password"
-        />
-       <button type="submit" class="btn btn-primary">Login</button>
+
   <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
 }
