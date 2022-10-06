@@ -27,5 +27,3 @@
             </div>
           </nav>
     </header>
-
-  {include file="footer.tpl"}

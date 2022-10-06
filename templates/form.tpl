@@ -1,4 +1,4 @@
-    {include file="header.tpl"}
+
     <form id="form-login" action="login.php" method="POST">
       <div>
         <label for="email" class="form-label">email</label>

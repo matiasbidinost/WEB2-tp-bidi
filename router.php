@@ -18,11 +18,13 @@ $teamController = new TeamController();
 switch ($param[0]) {
     case 'home':
         $leagueController->showHome();
+        $leagueController->showForm();
         break;
 
     case 'league':
         
         $leagueController->showLeague();
+        
         if (isset($param[1])) { 
             if (isset($param[2])) {
                 if ($param[2] == 'history') {//url/league/history
