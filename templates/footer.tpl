@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 
   <head>
@@ -13,5 +13,5 @@
     <footer class="piePag">
     Matias y Juan 
     </footer>
->>>>>>> 4713e32987c76f449d3a092c99d95dc9a6716d85
+
   </body>
