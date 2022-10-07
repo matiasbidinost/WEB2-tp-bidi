@@ -26,7 +26,6 @@ class LeagueController
   {
     $ligas = $this->leagueModel->getAllLigas();
     if (!empty($ligas)) {
-      $this->leagueView->showHome();
       $this->leagueView->showLiga($ligas);
     }
   }

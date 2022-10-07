@@ -13,12 +13,9 @@ class LeagueView
     }
     public function showLiga($ligas)
     {
-        foreach ($ligas as $ligass) {
-
-            echo '<a href = "league/'.$ligass->idLiga.'">' . $ligass->liga . '</a>';
-            echo '<img width="100" height="50" src= "' . $ligass->logo . '"></img>';
-            echo '<br>';
-        }
+      $smarty = new Smarty();
+      $smarty->assign('ligas', $ligas);
+      $smarty->display('templates/league.tpl');      
     }
     public function showTeam($equipos)
     {

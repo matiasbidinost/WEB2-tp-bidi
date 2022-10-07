@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-07 00:10:30
+/* Smarty version 4.2.1, created on 2022-10-07 17:53:40
   from 'C:\xampp\htdocs\web2\WEB2-tp-bidi\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633f52561034d2_70300933',
+  'unifunc' => 'content_63404b841294a1_61419755',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '80d458839dfa7c846776e100da7101b3bac6028c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\WEB2-tp-bidi\\templates\\header.tpl',
-      1 => 1665094208,
+      1 => 1665158019,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_633f52561034d2_70300933 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63404b841294a1_61419755 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-    <base href="<?php echo '<?php'; ?>
- echo BASE_URL <?php echo '?>'; ?>
-">
+    <base href="home">
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link href="/estilos/estilos.css" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Básquet</title>
 </head>
 <body>
@@ -51,6 +49,5 @@ function content_633f52561034d2_70300933 (Smarty_Internal_Template $_smarty_tpl)
               </div>
             </div>
           </nav>
-    </header>
-<?php }
+    </header><?php }
 }

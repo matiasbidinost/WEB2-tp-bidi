@@ -1,1 +1,0 @@
-/stats, historia, logo y nombre de la Liga
