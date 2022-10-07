@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-10-2022 a las 20:33:32
+-- Tiempo de generación: 07-10-2022 a las 22:18:17
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -74,6 +74,19 @@ INSERT INTO `ligas` (`idLiga`, `logo`, `liga`, `record`, `historia`) VALUES
 (2, 'imagen/america.jpg', 'Liga de Campeones de Baloncesto de las Américas', 'Último campeón:	Bandera de Argentina San Lorenzo\r\nÚltimo subcampeón: Bandera de Venezuela Guaros de Lara\r\nMás campeonatos: Bandera de Argentina San Lorenzo, Bandera de Argentina Peñarol de Mar del Plata y Bandera de Venezuela Guaros de Lara.\r\nMás participaciones: Capitanes de Arecibo	', 'El lanzamiento oficial del torneo fue en Montevideo, Uruguay y estuvo encabezado por el presidente honorario de FIBA, el argentino Horacio Muratore, el director ejecutivo de FIBA en Américas, el brasileño Carlos Alves, y el CEO de la Basketball Champions League de Europa, Patrick Comninos.'),
 (4, 'imagen/nba.jpg', 'liga USA basquetbol', 'En 1956 los Boston Celtics convirtieron en una auténtica leyenda, ganando 11 anillos en las 13 temporadas en las que estuvo en activo. En 1959 el central Wilt Chamberlain entró en la liga y en poco tiempo se convertiría en uno de los jugadores más dominantes que jamás haya pisado una cancha de baloncesto, estableciendo todo tipo de récords en puntos y rebotes, y llegando, incluso, a anotar 100 puntos en un partido. Su rivalidad con Russell es recordada como una de las más grandes en la historia del deporte.\r\n\r\nEn la temporada 1979-1980 la liga agregó la línea de tres puntos. Esa temporada, entrarían en la liga los rookies Magic Johnson y Larry Bird, para jugar en los Lakers y Celtics respectivamente, y se dio comienzo a un periodo en el que el interés por la liga y el número de aficionados creció tanto en el país como en el mundo entero. La preciosa rivalidad que mantenían estos dos jugadores fue, como muchos dicen, uno de los salvadores de la liga, que parecía que empezaba a vagar sin rumbo antes de sus llegadas. Bird ganaría con Boston tres títulos, mientras que Johnson se proclamaría vencedor de cinco campeonatos con los Lakers.\r\n\r\nMichael Jordan empieza a jugar en 1984 en la NBA, provocando un mayor interés en la liga. En 1989, el número de equipos se elevaba ya a 27, siguiendo el proceso de expansión. Durante la década de los 90, Jordan, ganaría seis anillos con los Bulls.\r\n\r\nLos inicios del nuevo milenio fueron dominados por Los Angeles Lakers de Shaquille O Neal y Kobe Bryant. Otro equipo destacado en la década de los 2000 fue San Antonio Spurs. Los Celtics recuperaron el trono en 2008, mientras los Lakers se llevaron los campeonatos de 2009 y 2010.\r\n\r\nDallas Mavericks se coronó en 2011 y Miami Heat consiguió un Back-to-back que se creía el inicio de una dinastía, pero LeBron James, la estrella del Heat regresó a Cleveland para darle su primer título a la franquicia en 2016.\r\n\r\nGolden State Warriors ganó 3 anillos en 5 finales consecutivas mientras que el joven equipo Toronto Raptors se llevó la edición de 2019\r\n\r\nLos años 2020 empezaron con Los Angeles Lakers como campeones tras una década', 'La USA Basketball es la federación nacional de baloncesto de los Estados Unidos. Es una organización sin ánimo de lucro y encargado de regular el deporte del baloncesto en los Estados Unidos. También se encarga de representar a su país ante la FIBA así como ante el comité olímpico estadounidense en todo lo referente al deporte de la canasta.\r\n\r\nEsta federación nacional fue fundada en 1974 con el nombre de Amateur Basketball Association of the United States of America (Asociación Amateur de Baloncesto de los Estados Unidos de América). Fue renombrado como USA Basketball en el 12 de octubre de 1989, después de que la FIBA modificara sus estatutos y sus reglamentos para permitir ingresar y competir a jugadores profesionales provenientes de la NBA en sus competiciones internacionales.\r\n\r\nLa USA Basketball es la responsable de la preparación de las selecciones nacionales de baloncesto, tanto masculina como femenina, que representan a Estados Unidos en los torneos internacionales tales como el Campeonato Mundial de Baloncesto, los Juegos Olímpicos, los Juegos Panamericanos, el Torneo de las Américas y el Campeonato FIBA Américas.\r\n\r\nAsí mismo tiene como misión la promoción del baloncesto para hacer llegar dicho deporte al mayor número de aficionados posible.');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id_usuario` int(11) NOT NULL,
+  `nombre` text NOT NULL,
+  `email` text NOT NULL,
+  `contraseña` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Índices para tablas volcadas
 --
@@ -93,6 +106,12 @@ ALTER TABLE `ligas`
   ADD PRIMARY KEY (`idLiga`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id_usuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -107,6 +126,12 @@ ALTER TABLE `equipos`
 --
 ALTER TABLE `ligas`
   MODIFY `idLiga` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas

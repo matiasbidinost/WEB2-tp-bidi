@@ -42,11 +42,13 @@ Agregue mas archivos tpl, separe header de form porq me causaba conflicto en el 
 Actualice view para que si clickeas en alguna de las url/league te redirija a los teams que tiene esa league (ej:
 clikeas arg, te lleva a url/league/1)
 
+7/10 //matias y juan
+Agregado funcionalides, agregado admin (faltan funcionalidades)
+Funcionalidades de la pagina solucionadas, rutas comprobadas, botones completamente funcionales, css redirigido correctamente, agregado tpl dde historia y de equipos en un liga concreta, agregado equipos (todos) agregado boton signUp
+Agregado ruta para boton signUp
+Limpieza de codigo en router.php, controller league, controller team y sus views
+
 ----siguientes pasos--------------------------------------------------------------------------------------------------
- -un <ul> con un href a liga, y otro con href a team (mirar viewTeam y viewLeague)//basicamente ahora se muestraa la lista,en showLeague, hacer q esa lista sea un boton que redirija hacia un id de liga
- -hacer que cada tpl me muestre cosas por separado y que no entre en conflicto con la view, corrregir rutas del router
- para que muestren en /more directamente toda la info de league o de equipo
--crear un model, view y controller con nombre de AdminContr....
--intentar que cuando clikeo en una liga me redirija a los equipos que hay en ella
--una vez q los botones funcionan aplicar smarty
--crear un boton q elimine, agregue o edite laguna liga o team (esto creo q todavia no lo vimos)
+-guardar datos del sign up para que se registre y tenga modalidad admin
+-crear un usuario admin con las siguientes desiciones
+-crear un boton q elimine, agregue o edite algun atributo de liga o team (esto creo q todavia no lo vimos)

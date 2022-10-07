@@ -20,24 +20,29 @@ switch ($param[0]) {
         $leagueController->showHome();
         $leagueController->showForm();
         break;
-
-    case 'league':
-
-        $leagueController->showLeague();
-
-        if (isset($param[1])) {
-            if ($param[2] == 'history') {
-
-                $leagueController->showHistory($param[1]); //showHistory muestra historia
-
-            } else if (intval($param[1])) {
-                $leagueController->showTeamsInThisLeague($param[1]); //league que un id....url/league/1
-            }
-        }
-        break;
     case 'teams':
         $teamController->showTeams();
         break;
+    case 'leagues':
+        if (isset($param[1])) { //primero chequeo q haya un parametro 1 seteado
+            if (intval($param[1])) { //luego chequeo q el param 1 sea un numero y no otra cosa
+                if ($param[2] == 'history') { //luegoo le digo si el param 2 es historiao es equipos
+
+                    $leagueController->showHistory($param[1]); //showHistory muestra historia
+
+                } else if ($param[2] == 'team') { //intval($param[1])
+                    $leagueController->showTeamsInThisLeague($param[1]); //league que un id....url/league/1
+                } else {
+                }
+            }
+        } else {
+            $leagueController->showLeague();
+        }
+        break;
+    case 'signUp':
+        echo "Aca te tiene q dirijir a un form para registrarte y que se guarde en la base de datos";
+        break;
+
 
     default:
         echo "Error 404 not found";

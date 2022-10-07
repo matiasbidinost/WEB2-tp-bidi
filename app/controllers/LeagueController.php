@@ -17,9 +17,9 @@ class LeagueController
   public function showHome()
   {
     $this->leagueView->showHome();
-    
   }
-  public function showForm(){
+  public function showForm()
+  {
     $this->leagueView->showForm();
   }
   public function showLeague()
@@ -33,7 +33,7 @@ class LeagueController
   {
     $equipos = $this->leagueModel->get_team_by_league($id_liga);
     if (!empty($equipos)) {
-      $this->leagueView->showTeam($equipos);
+      $this->leagueView->showTeams($equipos);
     }
   }
   public function showHistory($history)
@@ -41,13 +41,6 @@ class LeagueController
     $historyLeague = $this->leagueModel->get_league_history($history);
     if (!empty($historyLeague)) {
       $this->leagueView->show_History($historyLeague);
-    }
-  }
-  public function show_Stats($record)
-  {
-    $statsLeague = $this->leagueModel->get_record($record);
-    if (!empty($statsLeague)) {
-      $this->leagueView->showRecords($statsLeague);
     }
   }
 }
