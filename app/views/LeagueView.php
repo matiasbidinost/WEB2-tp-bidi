@@ -32,7 +32,10 @@ class LeagueView
 
             foreach ($historyLeague as $historiaL) {
 
-                echo '<a>' . $historiaL->historia . '</a>';
+                echo '<a>' . $historiaL->historia . '</a><br>';
+                echo '<h1>  RECORDS</h1>';
+                echo '<a>' . $historiaL->record . '</a>';
+
             }
     }
     public function showRecords($statsLeague)
