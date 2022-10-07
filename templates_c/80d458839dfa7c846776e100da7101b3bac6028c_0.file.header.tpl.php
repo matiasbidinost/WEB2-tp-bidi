@@ -1,37 +1,31 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-05 21:54:44
+/* Smarty version 4.2.1, created on 2022-10-07 00:10:30
   from 'C:\xampp\htdocs\web2\WEB2-tp-bidi\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_633de10402d4a8_78735338',
+  'unifunc' => 'content_633f52561034d2_70300933',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '80d458839dfa7c846776e100da7101b3bac6028c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web2\\WEB2-tp-bidi\\templates\\header.tpl',
-      1 => 1664999682,
+      1 => 1665094208,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_633de10402d4a8_78735338 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-    <link href="footer.php">
-    <meta charset="UTF-8">
+function content_633f52561034d2_70300933 (Smarty_Internal_Template $_smarty_tpl) {
+?>
     <base href="<?php echo '<?php'; ?>
  echo BASE_URL <?php echo '?>'; ?>
 ">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="/estilos/estilos.css" rel="stylesheet">
     <title>Básquet</title>
@@ -58,20 +52,5 @@ function content_633de10402d4a8_78735338 (Smarty_Internal_Template $_smarty_tpl)
             </div>
           </nav>
     </header>
-    <form id="form-login" action="login.php" method="POST">
-      <div>
-        <label for="email" class="form-label">email</label>
-        <input type="email" class="form-control" id="email" name="email" />
-      </div>
-      <div>
-        <label for="password" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          name="password"
-        />
-       <button type="submit" class="btn btn-primary">Login</button>
-  <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-}
+<?php }
 }

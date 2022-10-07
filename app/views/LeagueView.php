@@ -35,11 +35,10 @@ class LeagueView
                 echo '<a>' . $historiaL->historia . '</a>';
             }
     }
-
-    // public function showError($mensaje){
-    // $mensaje ="error";
-    // }
-
-
-
+    public function showRecords($statsLeague)
+    {
+          foreach($statsLeague as $statsL){
+            echo '<a>' . $statsL->statsLeague . '</a>';
+          }
+    }
 }

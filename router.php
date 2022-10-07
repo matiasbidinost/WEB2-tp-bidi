@@ -30,8 +30,7 @@ switch ($param[0]) {
                 if ($param[2] == 'history') {//url/league/history
 
                     $leagueController->showHistory($param[1]); //showHistory muestra historia
-                } else if ($param[2] == 'stats') {
-                    //$leagueController->showStats($param[1]); //showStats muestra las records y estadisticas
+                    $leagueController->show_Stats(); //showStats muestra las records y estadisticas
                     echo "aqui llego bala1";
                 }
             } else if (intval($param[1])) {

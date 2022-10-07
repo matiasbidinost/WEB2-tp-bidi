@@ -44,11 +44,11 @@ class LeagueController
       $this->leagueView->show_History($historyLeague);
     }
   }
-  public function showStats($record)
+  public function show_Stats($record)
   {
-    $stats = $this->leagueModel->get_record($record);
-    if (!empty($equipos)) {
-      $this->leagueView->showRecords($stats);
+    $statsLeague = $this->leagueModel->get_record($record);
+    if (!empty($statsLeague)) {
+      $this->leagueView->showRecords($statsLeague);
     }
   }
 }
