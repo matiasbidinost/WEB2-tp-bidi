@@ -1,5 +1,5 @@
 <?php
-class LeagueModel
+class AdminModel
 {
   private $db;
   function __construct()

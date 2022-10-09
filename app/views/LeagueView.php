@@ -32,6 +32,6 @@ class LeagueView
     $smarty = new Smarty();
     $smarty->assign('equipos', $equipos);
     $smarty->display('templates/header.tpl');
-    $smarty->display('templates/teamsInLeague.tpl');
+    $smarty->display('templates/teams.tpl');
   }
 }

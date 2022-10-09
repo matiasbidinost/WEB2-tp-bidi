@@ -1,6 +1,7 @@
 <?php
 require_once './app/controllers/LeagueController.php';
 require_once './app/controllers/TeamController.php';
+require_once './app/controllers/AdminController.php';
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
 // lee la acción
@@ -15,6 +16,7 @@ if (!empty($_GET['action'])) { //si no se escribe home, entra igual al home (tod
 $param = explode('/', $action);
 $leagueController = new LeagueController();
 $teamController = new TeamController();
+$adminController = new AdminController();
 switch ($param[0]) {
     case 'home':
         $leagueController->showHome();
@@ -40,7 +42,7 @@ switch ($param[0]) {
         }
         break;
     case 'signUp':
-        echo "Aca te tiene q dirijir a un form para registrarte y que se guarde en la base de datos";
+        $adminController->signUp();
         break;
 
 
