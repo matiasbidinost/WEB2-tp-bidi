@@ -16,7 +16,16 @@ class AdminController
   }
   public function signUp(){
     $this->adminView->showSignUp();
+    $usuario = array(
+      "nombre" => $_POST["user"],
+      "email" => $_POST["email"],
+      "contrasenia" => $_POST["pass"],
+    );
+    $this->adminModel->registerUser($usuario);
   }
-
-  
+public function register(){
+      
+   
+    echo "llegue";
+  }
 }

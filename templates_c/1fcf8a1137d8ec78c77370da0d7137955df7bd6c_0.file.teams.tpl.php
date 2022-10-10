@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-09 22:58:01
+/* Smarty version 4.2.1, created on 2022-10-10 01:54:48
   from 'C:\xampp\htdocs\WEB2-tp-bidi\templates\teams.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634335d90e6bf3_06194914',
+  'unifunc' => 'content_63435f48c213e0_59078251',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1fcf8a1137d8ec78c77370da0d7137955df7bd6c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2-tp-bidi\\templates\\teams.tpl',
-      1 => 1665349077,
+      1 => 1665349093,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634335d90e6bf3_06194914 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63435f48c213e0_59078251 (Smarty_Internal_Template $_smarty_tpl) {
 ?><ul class="teamList">
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['equipos']->value, 'teams');
@@ -34,7 +34,7 @@ $_smarty_tpl->tpl_vars['teams']->do_else = false;
 " width="100" height="100"></li>
     <li><p>Historia: <?php echo $_smarty_tpl->tpl_vars['teams']->value->historia;?>
 </p></li>
-    <li><h4>Jugadores: </h4><p><?php echo $_smarty_tpl->tpl_vars['teams']->value->jugadores;?>
+    <li><h2>Jugadores: </h2><p><?php echo $_smarty_tpl->tpl_vars['teams']->value->jugadores;?>
 </p></li>
   <?php
 }
