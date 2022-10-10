@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-09 22:34:14
+/* Smarty version 4.2.1, created on 2022-10-10 20:39:08
   from 'C:\xampp\htdocs\WEB2-tp-bidi\templates\league.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_634330466c0885_03233029',
+  'unifunc' => 'content_634466ccef50a7_86833424',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed921c99c1f28674d83a0b85e1583c5a9ac3a7c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2-tp-bidi\\templates\\league.tpl',
-      1 => 1665347651,
+      1 => 1665426418,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_634330466c0885_03233029 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634466ccef50a7_86833424 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <ul class="leaguelist">
   <?php

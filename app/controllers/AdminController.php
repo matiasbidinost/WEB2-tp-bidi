@@ -16,16 +16,29 @@ class AdminController
   }
   public function signUp(){
     $this->adminView->showSignUp();
-    $usuario = array(
-      "nombre" => $_POST["user"],
-      "email" => $_POST["email"],
-      "contrasenia" => $_POST["pass"],
-    );
-    $this->adminModel->registerUser($usuario);
+  
+    
   }
-public function register(){
-      
-   
-    echo "llegue";
+  public function showFormUpdate(){
+    $this->adminView->showFupdate();
+  
+    
   }
+ public function register(){
+  $nombre = $_POST['nombre'];
+  $email = $_POST['email'];
+  $contrasenia = $_POST['contrasenia'];   
+  $this->adminModel->registerUser($nombre,$email,$contrasenia); 
+
+  $this->adminView->showHome();
+  }
+ public function newLeague(){
+  $logo = $_POST['logo']; 
+  $liga = $_POST['liga']; 
+  $record = $_POST['record']; 
+  $historia = $_POST['historia']; 
+
+  $this->adminModel->new_League($logo,$liga,$record,$historia);
+
+ }
 }

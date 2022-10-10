@@ -13,4 +13,8 @@ class AdminView
     $smarty->display('templates/header.tpl');
     $smarty->display('templates/signUp.tpl');
   }
+  public function showFupdate(){
+    $smarty = new  Smarty();
+    $smarty->display('templates/adminEdit.tpl');
+  }
 }
