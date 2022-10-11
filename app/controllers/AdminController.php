@@ -23,6 +23,12 @@ class AdminController
        $this->adminView->showFupdate($ligas);
     }  
   }
+  public function showTeamsUpdate(){
+    $equipos = $this->adminModel->get_teams();
+    if (!empty($equipos)){
+      $this->adminView->TeamsUpdate($equipos);
+    }  
+  }  
  public function register(){
   $nombre = $_POST['nombre'];
   $email = $_POST['email'];
@@ -54,5 +60,25 @@ class AdminController
   $idLiga = $_POST['idLiga'];
   
  }
+//  ----------------------------------------------------------
+//  Parte de equipos
+ public function deleteTeams(){
+  $id_equipo = $_POST['id_equipo'];
 
+  if(isset($_POST) and !empty($_POST)){
+  $this->adminModel->deleteTeams($id_equipo);
+  $this->adminView->showSuccess();
+ }}
+  public function newTeams(){
+  $nombre = $_POST['nombre']; 
+  $logo = $_POST['logo']; 
+  $historia = $_POST['historia']; 
+  $jugadores = $_POST['jugadores'];
+
+  if(isset($_POST) and !empty($_POST)){
+  $this->adminModel->new_Teams($nombre,$logo,$historia,$jugadores);
+  
+  $this->adminView->showSuccess();
+ }
+ }
 }

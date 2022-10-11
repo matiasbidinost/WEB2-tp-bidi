@@ -1,6 +1,7 @@
 <form id="form-login" action="deleteLeague" method="POST">
 <h1 class="piePag">Eliminar liga</h1>
 <select name="idLiga">
+  <option value="">Selecionar liga</option>
   {foreach from=$ligas item=league}
     <option value="{$league->idLiga}">{$league->liga}</option>
   {/foreach}
@@ -33,4 +34,3 @@
  <label class="form-label" for="historia">Historia: <input name="historia" type="text" class="form-control" required></label>
  <input type="submit" value="Agregar" class="btn btn-primary">
 </form>
-{include file="footer.tpl"}

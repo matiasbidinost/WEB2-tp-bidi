@@ -10,18 +10,36 @@ class AdminModel
     $query = $this->db->prepare ('INSERT INTO usuarios (nombre, email, contrasenia) VALUES (?, ?, ?) ');
     $query->execute([$nombre, $email, $contrasenia]);
   }
+  // Agrego liga de LEAGUES
   public function new_League($logo,$liga,$record,$historia){
    $query = $this->db->prepare ('INSERT INTO ligas (logo, liga, record, historia) VALUES (?, ?, ?, ?) '); 
    $query->execute([$logo,$liga,$record,$historia]); 
   }
+// Agrego equipo de TEAMS
+    public function new_Teams($nombre,$logo,$historia,$jugadores){
+   $query = $this->db->prepare ('INSERT INTO equipos (nombre, logo, historia, jugadores) VALUES (?, ?, ?, ?) '); 
+   $query->execute([$nombre,$logo,$historia,$jugadores]); 
+  }
+  // -----
   public function getAllLigas(){
     $query = $this->db->prepare('SELECT `idLiga`, `liga`FROM `ligas`');
     $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);
   }
+   public function get_teams(){
+    $query = $this->db->prepare('SELECT * FROM equipos ORDER BY id_equipo ASC');
+    $query->execute();
+    $equipo = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
+    return $equipo;
+   }  
+  //  BORRO LEAGUES
   public function delete_League($idLiga){
     $query = $this->db->prepare ('DELETE FROM `ligas` WHERE `idLiga` = ?'); 
     $query->execute([$idLiga]); 
   }
-
+  // BORRO TEAMS
+  public function deleteTeams($id_equipo){
+    $query = $this->db->prepare ('DELETE FROM `equipos` WHERE `id_equipo` = ?'); 
+    $query->execute([$id_equipo]); 
+}
 }

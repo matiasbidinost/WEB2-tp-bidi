@@ -16,8 +16,13 @@ class AdminView
   public function showFupdate($ligas){
     $smarty = new  Smarty();
     $smarty->assign('ligas', $ligas);
-    $smarty->display('templates/adminEdit.tpl');
+    $smarty->display('templates/adminLeagues.tpl');
   }
+  public function TeamsUpdate($equipos){
+    $smarty = new  Smarty();
+    $smarty->assign('equipos', $equipos);
+    $smarty->display('templates/adminTeams.tpl');
+  }  
   public function showSuccess(){
     $smarty = new Smarty();
     $smarty->display('templates/header.tpl');

@@ -7,7 +7,7 @@
   color: white;
   text-align: center;
 }
-u{
+u {
   background-color: rgb(23, 153, 6);
   bottom: 0;
   width: max-content;
@@ -20,8 +20,16 @@ u{
   text-align: center;
   text-decoration: none;
   font-size: 20pt;
-  
 }
-p{
-  color:rgb(49, 49, 94);
+p {
+  color: rgb(49, 49, 94);
+}
+.ModifyTeams {
+  background-color: green;
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  height: 80px;
+  color: white;
+  text-align: center;
 }

@@ -22,6 +22,7 @@ switch ($param[0]) {
         $leagueController->showHome();
         $leagueController->showForm();
         $adminController->showFormUpdate();
+        $adminController->showTeamsUpdate();
         break;
     case 'teams':
         $teamController->showTeams();
@@ -61,6 +62,14 @@ switch ($param[0]) {
     case'modifyLeague':
         $adminController->modifyLeague();
     break;
+    // parte de equipos
+    case'deleteTeams':
+        $adminController->deleteTeams();
+    break;
+    case'newTeams':
+        $adminController->newTeams();
+    break;
+
     default:
         echo "Error 404 not found";
         # code...
