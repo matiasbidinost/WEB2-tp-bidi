@@ -55,10 +55,12 @@ switch ($param[0]) {
     case 'newLeague':
             $adminController->newLeague();
     break;
-    
-   
-
-
+    case 'deleteLeague':
+        $adminController->deleteLeague();
+    break;
+    case'modifyLeague':
+        $adminController->modifyLeague();
+    break;
     default:
         echo "Error 404 not found";
         # code...

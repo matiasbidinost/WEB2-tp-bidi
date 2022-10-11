@@ -19,5 +19,9 @@ class AdminModel
     $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);
   }
+  public function delete_League($idLiga){
+    $query = $this->db->prepare ('DELETE FROM `ligas` WHERE `idLiga` = ?'); 
+    $query->execute([$idLiga]); 
+  }
 
 }

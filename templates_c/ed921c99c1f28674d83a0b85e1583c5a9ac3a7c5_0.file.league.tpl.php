@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-11 02:10:27
+/* Smarty version 4.2.1, created on 2022-10-11 15:32:37
   from 'C:\xampp\htdocs\WEB2-tp-bidi\templates\league.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6344b473338863_41133162',
+  'unifunc' => 'content_6345707564be06_27886737',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ed921c99c1f28674d83a0b85e1583c5a9ac3a7c5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2-tp-bidi\\templates\\league.tpl',
-      1 => 1665447004,
+      1 => 1665495151,
       2 => 'file',
     ),
   ),
@@ -21,8 +21,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6344b473338863_41133162 (Smarty_Internal_Template $_smarty_tpl) {
-?><ul class="leaguelist">
+function content_6345707564be06_27886737 (Smarty_Internal_Template $_smarty_tpl) {
+?><ul>
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['ligas']->value, 'league');
 $_smarty_tpl->tpl_vars['league']->do_else = true;
