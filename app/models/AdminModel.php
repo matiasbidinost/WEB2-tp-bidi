@@ -16,11 +16,11 @@ class AdminModel
    $query->execute([$logo,$liga,$record,$historia]); 
   }
 // Agrego equipo de TEAMS
-    public function new_Teams($nombre,$logo,$historia,$jugadores){
-   $query = $this->db->prepare ('INSERT INTO equipos (nombre, logo, historia, jugadores) VALUES (?, ?, ?, ?) '); 
-   $query->execute([$nombre,$logo,$historia,$jugadores]); 
+    public function new_Teams($newfk, $nombre,$logo,$historia,$jugadores){
+   $query = $this->db->prepare ('INSERT INTO `equipos`(`id_fk_liga`, `nombre`, `logo`, `historia`, `jugadores`) VALUES (?, ?, ?, ?, ?) '); 
+   $query->execute([$newfk,$nombre,$logo,$historia,$jugadores]); 
   }
-  // -----
+  // ----
   public function getAllLigas(){
     $query = $this->db->prepare('SELECT `idLiga`, `liga`FROM `ligas`');
     $query->execute();

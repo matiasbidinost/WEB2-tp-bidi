@@ -1,9 +1,9 @@
 <form id="form-login" action="newTeams" method="POST">
   <h1 class="ModifyTeams">Agregar Equipo</h1>
-    {* <label class="form-label" for="id"
-    >id:
-    <input name="id" type="text" class="form-control" required
-  /></label> *}
+    <label class="form-label" for="newfk_add"
+    >id forenki del equipo:
+    <input name="newfk_add" type="number" class="form-control" min="0" required
+  /></label>
   <label class="form-label" for="nombre"
     >nombre del equipo:
     <input name="nombre" type="text" class="form-control" required

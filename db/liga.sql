@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `equipos` (
   `id_equipo` int(11) NOT NULL,
-  `id_fk-liga` int(11) NOT NULL,
+  `id_fk_liga` int(11) NOT NULL,
   `nombre` text NOT NULL,
   `logo` text NOT NULL,
   `historia` text NOT NULL,

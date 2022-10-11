@@ -70,13 +70,14 @@ class AdminController
   $this->adminView->showSuccess();
  }}
   public function newTeams(){
+  $newfk = $_POST['newfk_add'];
   $nombre = $_POST['nombre']; 
   $logo = $_POST['logo']; 
   $historia = $_POST['historia']; 
   $jugadores = $_POST['jugadores'];
 
   if(isset($_POST) and !empty($_POST)){
-  $this->adminModel->new_Teams($nombre,$logo,$historia,$jugadores);
+  $this->adminModel->new_Teams($newfk, $nombre,$logo,$historia,$jugadores);
   
   $this->adminView->showSuccess();
  }
