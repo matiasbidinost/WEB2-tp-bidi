@@ -69,6 +69,9 @@ switch ($param[0]) {
     case'newTeams':
         $adminController->newTeams();
     break;
+    case'modifyTeams':
+        $adminController->modifyTeams();
+    break;
 
     default:
         echo "Error 404 not found";

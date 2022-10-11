@@ -24,12 +24,21 @@ u {
 p {
   color: rgb(49, 49, 94);
 }
-.ModifyTeams {
-  background-color: green;
-  width: 100%;
-  padding-top: 1%;
-  padding-bottom: 3%;
-  height: 80px;
+.adminLeague {
+  background-color: brown;
+  padding: 0%;
+  height: 60px;
   color: white;
   text-align: center;
+  font-size: 45px;
+  font-family: "Courier New", Courier, monospace;
+}
+.ModifyTeams {
+  background-color: green;
+  padding: 0%;
+  height: 60px;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  font-family: "Courier New", Courier, monospace;
 }

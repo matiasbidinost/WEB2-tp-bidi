@@ -1,1 +1,1 @@
-<u>usted a logrado hacer el cambio exitosamente</u>
+<p class="adminLeague">El cambio que usted buscaba realizar, se realizó</p>

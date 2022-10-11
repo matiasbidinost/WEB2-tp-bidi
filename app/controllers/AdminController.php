@@ -29,14 +29,20 @@ class AdminController
       $this->adminView->TeamsUpdate($equipos);
     }  
   }  
+  // Registro y logueo
  public function register(){
   $nombre = $_POST['nombre'];
   $email = $_POST['email'];
   $contrasenia = $_POST['contrasenia'];   
   $this->adminModel->registerUser($nombre,$email,$contrasenia); 
-
   $this->adminView->showSuccess();
   }
+  public function login(){
+    if (!empty($nombre) && register($contrasenia, $nombre->contrasenia)) {
+          $this->adminView->showSuccess();
+  }
+}
+
  public function newLeague(){
   $logo = $_POST['logo']; 
   $liga = $_POST['liga']; 
@@ -56,9 +62,32 @@ class AdminController
   $this->adminModel->delete_League($idLiga);
   $this->adminView->showSuccess();
  }}
+//  Modificar leagues
  public function modifyLeague(){
-  $idLiga = $_POST['idLiga'];
+   $logo = $_POST['logo']; 
+   $liga = $_POST['liga']; 
+   $record = $_POST['record']; 
+   $historia = $_POST['historia'];
+   $idLiga = $_POST['idLiga'];
+
+  if(isset($_POST) and !empty($_POST)){
+  $this->adminModel->modifyL($logo,$liga,$record,$historia,$idLiga);
   
+  $this->adminView->showSuccess();
+ }
+//  Modify teams
+ }
+ public function modifyTeams(){
+   $nombre = $_POST['nombre']; 
+   $logo = $_POST['logo']; 
+   $historia = $_POST['historia']; 
+   $jugadores = $_POST['jugadores'];
+   $id_equipo = $_POST['id_equipo'];
+  if(isset($_POST) and !empty($_POST)){
+  $this->adminModel->modifyTeam($nombre,$logo,$historia,$jugadores,$id_equipo);
+  
+  $this->adminView->showSuccess();
+ }
  }
 //  ----------------------------------------------------------
 //  Parte de equipos

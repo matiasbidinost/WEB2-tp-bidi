@@ -41,5 +41,14 @@ class AdminModel
   public function deleteTeams($id_equipo){
     $query = $this->db->prepare ('DELETE FROM `equipos` WHERE `id_equipo` = ?'); 
     $query->execute([$id_equipo]); 
+  }
+  // Modifico leagues  
+  public function modifyL($logo,$liga,$record,$historia, $idLiga){
+    $query = $this->db->prepare ("UPDATE ligas SET logo=?, liga=?, record=?, historia=? WHERE idLiga=?");
+   $query->execute([$logo,$liga,$record,$historia,$idLiga]); 
+  }
+     public function modifyTeam($id_equipo,$nombre,$logo,$historia,$jugadores){
+    $query = $this->db->prepare ("UPDATE equipos SET nombre=?, logo=?, historia=?, jugadores=? WHERE id_equipo=?");
+   $query->execute([$nombre,$logo,$historia,$jugadores,$id_equipo]); 
 }
 }

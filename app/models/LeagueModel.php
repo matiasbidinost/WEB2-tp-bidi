@@ -14,7 +14,7 @@ class LeagueModel
   }
   public function get_team_by_league($id_liga)
   {
-    $query = $this->db->prepare('SELECT * FROM `equipos` WHERE `id_fk-liga`=?');
+    $query = $this->db->prepare('SELECT * FROM `equipos` WHERE `id_fk_liga`=?');
     $query->execute([$id_liga]);
     $equipo = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
     return $equipo;
