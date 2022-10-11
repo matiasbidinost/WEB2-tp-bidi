@@ -8,5 +8,3 @@
 <form id="form-login" action="signUp" method="POST">
  <button type="submit" class="btn btn-primary">Registrate</button>
 </form>
-
-{include file="footer.tpl"}

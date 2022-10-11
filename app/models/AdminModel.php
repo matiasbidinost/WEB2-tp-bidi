@@ -14,5 +14,10 @@ class AdminModel
    $query = $this->db->prepare ('INSERT INTO ligas (logo, liga, record, historia) VALUES (?, ?, ?, ?) '); 
    $query->execute([$logo,$liga,$record,$historia]); 
   }
+  public function getAllLigas(){
+    $query = $this->db->prepare('SELECT `idLiga`, `liga`FROM `ligas`');
+    $query->execute();
+    return $query->fetchAll(PDO::FETCH_OBJ);
+  }
 
 }

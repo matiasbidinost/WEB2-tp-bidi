@@ -20,7 +20,11 @@ class AdminController
     
   }
   public function showFormUpdate(){
-    $this->adminView->showFupdate();
+    $ligas = $this->adminModel->getAllLigas();
+    if (!empty($ligas)) {
+       $this->adminView->showFupdate($ligas);
+    }
+   
   
     
   }
@@ -30,7 +34,7 @@ class AdminController
   $contrasenia = $_POST['contrasenia'];   
   $this->adminModel->registerUser($nombre,$email,$contrasenia); 
 
-  $this->adminView->showHome();
+  $this->adminView->showSuccess();
   }
  public function newLeague(){
   $logo = $_POST['logo']; 
@@ -39,6 +43,8 @@ class AdminController
   $historia = $_POST['historia']; 
 
   $this->adminModel->new_League($logo,$liga,$record,$historia);
+  
+  $this->adminView->showSuccess();
 
  }
 }

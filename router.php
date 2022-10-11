@@ -45,16 +45,18 @@ switch ($param[0]) {
         } else {
             $leagueController->showLeague();
         }
-        break;
+    break;
     case 'signUp':
         $adminController->signUp();
-     break;
+    break;
     case 'register':
         $adminController->register();
-     break;
-    case 'newLegue':
+    break;
+    case 'newLeague':
             $adminController->newLeague();
-     break;
+    break;
+    
+   
 
 
     default:

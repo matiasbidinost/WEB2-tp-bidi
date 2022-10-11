@@ -1,8 +1,24 @@
 .piePag {
   background-color: brown;
-  bottom: 0;
   width: 100%;
+  padding-top: 1%;
+  padding-bottom: 3%;
   height: 80px;
   color: white;
   text-align: center;
+}
+u{
+  background-color: rgb(23, 153, 6);
+  bottom: 0;
+  width: max-content;
+  padding-left: 25%;
+  padding-right: 31%;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  height: 80px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20pt;
+  
 }
