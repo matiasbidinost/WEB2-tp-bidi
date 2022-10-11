@@ -48,6 +48,13 @@ Funcionalidades de la pagina solucionadas, rutas comprobadas, botones completame
 Agregado ruta para boton signUp
 Limpieza de codigo en router.php, controller league, controller team y sus views
 
+---
+
+11-10-22 18:17
+Juan
+Termino la parte de agregar eliminar y borrar la parte de LEAGUE y TEAMS, en teams la parte de MODIFICAR no funciona al 100%, esto quiere decir que, no funciona por que MODIFICO no tira ERROR, pero no se MODIFICA NADA.
+Acomodé la parte de LOGIN Y REGISTER, FALTA SEGUIR, FALTA.
+
 ----siguientes pasos--------------------------------------------------------------------------------------------------
 -guardar datos del sign up para que se registre y tenga modalidad admin
 -crear un usuario admin con las siguientes desiciones
