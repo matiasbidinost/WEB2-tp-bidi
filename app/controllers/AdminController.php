@@ -80,7 +80,13 @@ class AdminController
    $historia = $_POST['historia']; 
    $jugadores = $_POST['jugadores'];
    $id_equipo = $_POST['id_equipo'];
-  if(isset($_POST) and !empty($_POST)){
+   //el if este es enorme pero se acegura q todos los campos esten llenos (deberia haber algo mejor pero no se me ocurre)
+  if((isset($_POST['id_fk_liga']) and !empty($_POST['id_fk_liga']))and
+  (isset($_POST['nombre']) and !empty($_POST['nombre']))and
+  (isset($_POST['logo']) and !empty($_POST['logo']))and
+  (isset($_POST['historia']) and !empty($_POST['historia']))and
+  (isset($_POST['jugadores']) and !empty($_POST['jugadores']))and
+  (isset($_POST['id_equipo']) and !empty($_POST['id_equipo']))){
   $this->adminModel->modifyTeam($id_fk_liga,$nombre,$logo,$historia,$jugadores,$id_equipo);
   
   $this->adminView->showSuccess();

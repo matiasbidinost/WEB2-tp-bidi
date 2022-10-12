@@ -55,7 +55,10 @@ Juan
 Termino la parte de agregar eliminar y borrar la parte de LEAGUE y TEAMS, en teams la parte de MODIFICAR no funciona al 100%, esto quiere decir que, no funciona por que MODIFICO no tira ERROR, pero no se MODIFICA NADA.
 Acomodé la parte de LOGIN Y REGISTER, FALTA SEGUIR, FALTA.
 
+12/10 // matias
+todas las funcionalidades finalizadas, falta chequear que la sesion exista en nuestra bbdd, session y permisos de admin
+
 ----siguientes pasos--------------------------------------------------------------------------------------------------
--guardar datos del sign up para que se registre y tenga modalidad admin
+-modalidad admin
 -crear un usuario admin con las siguientes desiciones
--crear un boton q elimine, agregue o edite algun atributo de liga o team (esto creo q todavia no lo vimos)
+-PLUS: agregar estilos e imagenes de fondo para mejorar el tp, NO USAR TIPOGRAFIA CON REMATE
