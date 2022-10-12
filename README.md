@@ -58,7 +58,11 @@ Acomodé la parte de LOGIN Y REGISTER, FALTA SEGUIR, FALTA.
 12/10 // matias
 todas las funcionalidades finalizadas, falta chequear que la sesion exista en nuestra bbdd, session y permisos de admin
 
-----siguientes pasos--------------------------------------------------------------------------------------------------
+12/10 Juan
+Anda el registrarse y loguearse con un usuario, y cuando te logueas con el usuario te lleva como admin a modificar
+No anda el borrar Liga, yo no lo toqué tira como si no existiese IDLIGA, el resto si anda de 10.
+
+---siguientes pasos--------------------------------------------------------------------------------------------------
 -modalidad admin
 -crear un usuario admin con las siguientes desiciones
 -PLUS: agregar estilos e imagenes de fondo para mejorar el tp, NO USAR TIPOGRAFIA CON REMATE

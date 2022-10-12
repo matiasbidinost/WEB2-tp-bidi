@@ -21,7 +21,7 @@ switch ($param[0]) {
     case 'home':
         $leagueController->showHome();
         $leagueController->showForm();
-        $adminController->showFormUpdate();
+        // $adminController->showFormUpdate();
         break;
     case 'teams':
         $teamController->showTeams();
@@ -51,6 +51,9 @@ switch ($param[0]) {
     break;
     case 'register':
         $adminController->register();
+    break;
+    case 'login':
+        $adminController->login();
     break;
     case 'newLeague':
             $adminController->newLeague();

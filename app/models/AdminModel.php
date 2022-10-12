@@ -6,10 +6,18 @@ class AdminModel
   {
     $this->db = new PDO('mysql:host=localhost;' . 'dbname=liga;charset=utf8', 'root', '');
   }
+  // Subo datos a la base de datos ingresados por usuario
   public function registerUser($nombre,$email,$contrasenia){
     $query = $this->db->prepare ('INSERT INTO usuarios (nombre, email, contrasenia) VALUES (?, ?, ?) ');
     $query->execute([$nombre, $email, $contrasenia]);
   }
+  // Obtengo los datos de usuario de la base de datos -- tomo nombre y de ahi la contraseña viene con él
+    public function getByUsername($nombre) {
+        $query = $this->db->prepare('SELECT * FROM usuarios WHERE nombre = ?');
+        $query->execute(array($nombre));
+
+        return $query->fetch(PDO::FETCH_OBJ);
+    }
   // Agrego liga de LEAGUES
   public function new_League($logo,$liga,$record,$historia){
    $query = $this->db->prepare ('INSERT INTO ligas (logo, liga, record, historia) VALUES (?, ?, ?, ?) '); 

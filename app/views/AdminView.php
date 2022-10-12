@@ -25,4 +25,8 @@ class AdminView
     $smarty->display('templates/header.tpl');
     $smarty->display('templates/success.tpl');
   }
+  public function showError(){
+    $smarty = new Smarty();
+    $smarty->display('templates/error.tpl'); 
+  }
 }
