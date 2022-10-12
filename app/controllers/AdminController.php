@@ -19,16 +19,12 @@ class AdminController
   }
   public function showFormUpdate(){
     $ligas = $this->adminModel->getAllLigas();
-    if (!empty($ligas)) {
-       $this->adminView->showFupdate($ligas);
-    }  
-  }
-  public function showTeamsUpdate(){
     $equipos = $this->adminModel->get_teams();
-    if (!empty($equipos)){
-      $this->adminView->TeamsUpdate($equipos);
-    }  
-  }  
+    if (!empty($ligas) and !empty($equipos)) {
+       $this->adminView->showUpdate($ligas,$equipos);
+    }
+  } 
+    
   // Registro y logueo
  public function register(){
   $nombre = $_POST['nombre'];
@@ -78,13 +74,14 @@ class AdminController
 //  Modify teams
  }
  public function modifyTeams(){
+   $id_fk_liga = $_POST['id_fk_liga']; 
    $nombre = $_POST['nombre']; 
    $logo = $_POST['logo']; 
    $historia = $_POST['historia']; 
    $jugadores = $_POST['jugadores'];
    $id_equipo = $_POST['id_equipo'];
   if(isset($_POST) and !empty($_POST)){
-  $this->adminModel->modifyTeam($nombre,$logo,$historia,$jugadores,$id_equipo);
+  $this->adminModel->modifyTeam($id_fk_liga,$nombre,$logo,$historia,$jugadores,$id_equipo);
   
   $this->adminView->showSuccess();
  }
@@ -99,14 +96,14 @@ class AdminController
   $this->adminView->showSuccess();
  }}
   public function newTeams(){
-  $newfk = $_POST['newfk_add'];
+  $id_fk_liga = $_POST['id_fk_liga'];
   $nombre = $_POST['nombre']; 
   $logo = $_POST['logo']; 
   $historia = $_POST['historia']; 
   $jugadores = $_POST['jugadores'];
 
   if(isset($_POST) and !empty($_POST)){
-  $this->adminModel->new_Teams($newfk, $nombre,$logo,$historia,$jugadores);
+  $this->adminModel->new_Teams($id_fk_liga, $nombre,$logo,$historia,$jugadores);
   
   $this->adminView->showSuccess();
  }

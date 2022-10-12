@@ -16,9 +16,9 @@ class AdminModel
    $query->execute([$logo,$liga,$record,$historia]); 
   }
 // Agrego equipo de TEAMS
-    public function new_Teams($newfk, $nombre,$logo,$historia,$jugadores){
+    public function new_Teams($id_fk_liga, $nombre,$logo,$historia,$jugadores){
    $query = $this->db->prepare ('INSERT INTO `equipos`(`id_fk_liga`, `nombre`, `logo`, `historia`, `jugadores`) VALUES (?, ?, ?, ?, ?) '); 
-   $query->execute([$newfk,$nombre,$logo,$historia,$jugadores]); 
+   $query->execute([$id_fk_liga,$nombre,$logo,$historia,$jugadores]); 
   }
   // ----
   public function getAllLigas(){
@@ -47,8 +47,9 @@ class AdminModel
     $query = $this->db->prepare ("UPDATE ligas SET logo=?, liga=?, record=?, historia=? WHERE idLiga=?");
    $query->execute([$logo,$liga,$record,$historia,$idLiga]); 
   }
-     public function modifyTeam($id_equipo,$nombre,$logo,$historia,$jugadores){
-    $query = $this->db->prepare ("UPDATE equipos SET nombre=?, logo=?, historia=?, jugadores=? WHERE id_equipo=?");
-   $query->execute([$nombre,$logo,$historia,$jugadores,$id_equipo]); 
+  //modifico Teams
+  public function modifyTeam($id_fk_liga,$nombre,$logo,$historia,$jugadores,$id_equipo){
+    $query = $this->db->prepare ("UPDATE equipos SET id_fk_liga=?, nombre=?, logo=?, historia=?, jugadores=? WHERE id_equipo=?");
+   $query->execute([$id_fk_liga,$nombre,$logo,$historia,$jugadores,$id_equipo]); 
 }
 }

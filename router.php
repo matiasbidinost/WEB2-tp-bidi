@@ -22,7 +22,6 @@ switch ($param[0]) {
         $leagueController->showHome();
         $leagueController->showForm();
         $adminController->showFormUpdate();
-        $adminController->showTeamsUpdate();
         break;
     case 'teams':
         $teamController->showTeams();
