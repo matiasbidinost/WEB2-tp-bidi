@@ -1,5 +1,4 @@
-{include file="header.tpl"}
 
-<h1>Contraseña incorrecta</h1>
+<h1 class=error>Ha ocurrido un error, inténtelo de nuevo</h1>
 
 {include file="footer.tpl"}

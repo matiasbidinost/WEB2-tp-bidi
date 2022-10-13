@@ -64,5 +64,4 @@ No anda el borrar Liga, yo no lo toqué tira como si no existiese IDLIGA, el res
 
 ---siguientes pasos--------------------------------------------------------------------------------------------------
 -modalidad admin
--crear un usuario admin con las siguientes desiciones
 -PLUS: agregar estilos e imagenes de fondo para mejorar el tp, NO USAR TIPOGRAFIA CON REMATE

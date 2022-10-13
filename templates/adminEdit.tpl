@@ -28,7 +28,7 @@
 {*FORM PARA ELIMINAR UNA LIGA*}
 <form id="form-login" action="deleteLeague" method="POST">
 <p class="adminLeague">Borrar Liga</p>
-<select name="id_fk_liga">
+<select name="idLiga">
   <option value="">Selecionar liga</option>
   {foreach from=$ligas item=league}
     <option value="{$league->idLiga}">{$league->liga}</option>

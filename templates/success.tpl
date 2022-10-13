@@ -1,1 +1,1 @@
-<p class="adminLeague">El cambio que usted buscaba realizar, se realizó</p>
+<h1 class=sucess>La acción se logró realizar correctamente </h1>

@@ -8,7 +8,7 @@
   text-align: center;
 }
 u {
-  background-color: rgb(23, 153, 6);
+  background-color: rgb(180, 54, 38);
   bottom: 0;
   width: max-content;
   padding-left: 25%;
@@ -21,11 +21,8 @@ u {
   text-decoration: none;
   font-size: 20pt;
 }
-p {
-  color: rgb(49, 49, 94);
-}
 .adminLeague {
-  background-color: brown;
+  background-color: rgb(126, 27, 27);
   padding: 0%;
   height: 60px;
   color: white;
@@ -33,7 +30,23 @@ p {
   font-size: 45px;
 }
 .ModifyTeams {
-  background-color: green;
+  background-color: rgb(173, 38, 20);
+  padding: 0%;
+  height: 60px;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+}
+.sucess{
+  background-color: rgb(29, 112, 12);
+  padding: 0%;
+  height: 60px;
+  color: white;
+  text-align: center;
+  font-size: 45px;
+}
+.error{
+  background-color: rgb(184, 4, 4);
   padding: 0%;
   height: 60px;
   color: white;

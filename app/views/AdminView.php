@@ -15,6 +15,7 @@ class AdminView
   }
   public function showUpdate($ligas,$equipos){
     $smarty = new  Smarty();
+    $smarty->display('templates/header.tpl');
     $smarty->assign('ligas', $ligas);
     $smarty->assign('equipos', $equipos);
     $smarty->display('templates/adminEdit.tpl');
@@ -27,6 +28,7 @@ class AdminView
   }
   public function showError(){
     $smarty = new Smarty();
+    $smarty->display('templates/header.tpl');
     $smarty->display('templates/error.tpl'); 
   }
 }
