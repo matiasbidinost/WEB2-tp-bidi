@@ -28,8 +28,7 @@ class AdminController
   $this->adminView->showSuccess();
   }      
   // Tomo un username y compruebo los q me trae mi post de logueo
-  public function login(){
-    
+  public function login(){  
   $nombre = $_POST['nombre'];
   $contrasenia = $_POST['contrasenia']; 
   $user = $this->adminModel->getByUsername($nombre);
@@ -46,7 +45,9 @@ class AdminController
     }
 
 }
-
+//pasarlo al league controller o al team controller
+//extend o instanciar de admin controller en league controller y teamcontroller
+// header("Location: /home"); redirigir al home una vez mandado el formulario
   public function newLeague(){
     $logo = $_POST['logo']; 
     $liga = $_POST['liga']; 
