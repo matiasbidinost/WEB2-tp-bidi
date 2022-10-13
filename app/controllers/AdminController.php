@@ -26,24 +26,24 @@ class AdminController
   $hash = password_hash($contrasenia, PASSWORD_DEFAULT);  
   $this->adminModel->registerUser($nombre,$email,$hash); 
   $this->adminView->showSuccess();
-  echo("Te registraste bien");
   }      
   // Tomo un username y compruebo los q me trae mi post de logueo
   public function login(){
+    
   $nombre = $_POST['nombre'];
   $contrasenia = $_POST['contrasenia']; 
   $user = $this->adminModel->getByUsername($nombre);
-        // encontró un user con el username que mandó, y tiene la misma contraseña
-        if (!empty($user) && password_verify($contrasenia, $user->contrasenia)) {
-          // Ingreso datos de Ligas y Equipos, los obtengo y compruebo, de ahi muestro la parte de administrador
-          $ligas = $this->adminModel->getAllLigas();
-          $equipos = $this->adminModel->get_teams();
-          if (!empty($ligas) and !empty($equipos)) {
-          $this->adminView->showUpdate($ligas,$equipos);
-        }
-        } else {
-          $this->adminView->showError();
-        }
+    // encontró un user con el username que mandó, y tiene la misma contraseña
+    if (!empty($user) && password_verify($contrasenia, $user->contrasenia)) {
+      // Ingreso datos de Ligas y Equipos, los obtengo y compruebo, de ahi muestro la parte de administrador
+      $ligas = $this->adminModel->getAllLigas();
+      $equipos = $this->adminModel->get_teams();
+      if (!empty($ligas) and !empty($equipos)) {
+      $this->adminView->showUpdate($ligas,$equipos);
+    }
+    } else {
+      $this->adminView->showError();
+    }
 
 }
 
@@ -57,7 +57,9 @@ class AdminController
     $this->adminModel->new_League($logo,$liga,$record,$historia);
     
     $this->adminView->showSuccess();
-   }
+   } else {
+    $this->adminView->showError();
+  }
   }
  public function deleteLeague(){
   $idLiga = $_POST['idLiga'];
@@ -65,7 +67,9 @@ class AdminController
   if(isset($_POST) and !empty($_POST)){
   $this->adminModel->delete_League($idLiga);
   $this->adminView->showSuccess();
- }}
+ } else {
+  $this->adminView->showError();
+}}
 //  Modificar leagues
  public function modifyLeague(){
    $logo = $_POST['logo']; 
@@ -78,9 +82,12 @@ class AdminController
   $this->adminModel->modifyL($logo,$liga,$record,$historia,$idLiga);
   
   $this->adminView->showSuccess();
- }
+  } else {
+  $this->adminView->showError();
+}
+}
 //  Modify teams
- }
+ 
  public function modifyTeams(){
    $id_fk_liga = $_POST['id_fk_liga']; 
    $nombre = $_POST['nombre']; 
@@ -98,7 +105,9 @@ class AdminController
   $this->adminModel->modifyTeam($id_fk_liga,$nombre,$logo,$historia,$jugadores,$id_equipo);
   
   $this->adminView->showSuccess();
- }
+ } else {
+  $this->adminView->showError();
+}
  }
 //  ----------------------------------------------------------
 //  Parte de equipos
@@ -120,6 +129,8 @@ class AdminController
   $this->adminModel->new_Teams($id_fk_liga, $nombre,$logo,$historia,$jugadores);
   
   $this->adminView->showSuccess();
- }
+ } else {
+  $this->adminView->showError();
+}
  }
 }
