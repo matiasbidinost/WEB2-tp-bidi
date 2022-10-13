@@ -1,7 +1,6 @@
 <?php
 require_once './app/models/AdminModel.php';
 require_once './app/views/AdminView.php';
-
 //toda secuencia de comandos empieza por aca, sigue por el model(a veces) y despues view (a veces)
 
 class AdminController
@@ -14,9 +13,15 @@ class AdminController
     $this->adminModel = new AdminModel();
     $this->adminView = new AdminView();
   }
-  public function signUp(){
-    $this->adminView->showSignUp();  
-  } 
+  public function showAdmin(){
+      // Ingreso datos de Ligas y Equipos, los obtengo y compruebo, de ahi muestro la parte de administrador
+        $this->checkLoggedIn();
+        $ligas = $this->adminModel->getAllLigas();
+        $equipos = $this->adminModel->get_teams();
+        if (!empty($ligas) and !empty($equipos)) {
+        $this->adminView->showUpdate($ligas,$equipos);
+    }
+  }
   // Registro y logueo
  public function register(){
   // registro con lo que me ingresa el usuario en los form correcto
@@ -28,25 +33,36 @@ class AdminController
   $this->adminView->showSuccess();
   }      
   // Tomo un username y compruebo los q me trae mi post de logueo
-  public function login(){
-    
+  public function verifyUser(){
   $nombre = $_POST['nombre'];
   $contrasenia = $_POST['contrasenia']; 
   $user = $this->adminModel->getByUsername($nombre);
     // encontró un user con el username que mandó, y tiene la misma contraseña
     if (!empty($user) && password_verify($contrasenia, $user->contrasenia)) {
-      // Ingreso datos de Ligas y Equipos, los obtengo y compruebo, de ahi muestro la parte de administrador
-      $ligas = $this->adminModel->getAllLigas();
-      $equipos = $this->adminModel->get_teams();
-      if (!empty($ligas) and !empty($equipos)) {
-      $this->adminView->showUpdate($ligas,$equipos);
-    }
-    } else {
+      // Acá muestro lo que vendria siendo la adminisracion
+      // $this->showAdmin();
+      // PARTE SESSION
+      // INICIO LA SESSION Y LOGUEO AL USUARIO
+      session_start();
+      $_SESSION['username'] = $user;
+      header('Location: panel');
+    }else {
       $this->adminView->showError();
+      echo("error");
     }
-
 }
-
+    public function logout() {
+        session_start();
+        session_destroy();
+        header('Location: home');
+    }
+    private function checkLoggedIn() {
+        if (!isset($_SESSION['username'])) {
+            header('Location: ' . VERIFYUSER);
+            die();
+        }       
+    }
+// -------------------------------------------------------
   public function newLeague(){
     $logo = $_POST['logo']; 
     $liga = $_POST['liga']; 

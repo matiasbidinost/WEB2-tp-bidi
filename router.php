@@ -3,7 +3,8 @@ require_once './app/controllers/LeagueController.php';
 require_once './app/controllers/TeamController.php';
 require_once './app/controllers/AdminController.php';
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
-
+define("VERIFYUSER", BASE_URL . 'verifyUser');
+define("PANEL", BASE_URL . 'panel');
 // lee la acción
 $action = 'home';
 
@@ -21,7 +22,6 @@ switch ($param[0]) {
     case 'home':
         $leagueController->showHome();
         $leagueController->showForm();
-        
         break;
     case 'teams':
         $teamController->showTeams();
@@ -46,17 +46,21 @@ switch ($param[0]) {
             $leagueController->showLeague();
         }
     break;
-    case 'signUp':
-        $adminController->signUp();
-    break;
     case 'register':
         $adminController->register();
     break;
-    case 'login':
-        $adminController->login();
+    case 'verifyUser':
+        $adminController->verifyUser();
+    break;
+    // En panel muestro la section de adminsitrador
+    case 'panel':
+        $adminController->showAdmin();
+    break;
+    case 'logout':
+        $adminController->logout();
     break;
     case 'newLeague':
-            $adminController->newLeague();
+        $adminController->newLeague();
     break;
     case 'deleteLeague':
         $adminController->deleteLeague();

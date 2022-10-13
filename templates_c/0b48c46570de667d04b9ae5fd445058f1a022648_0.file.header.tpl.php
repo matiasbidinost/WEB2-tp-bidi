@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-07 22:41:54
+/* Smarty version 4.2.1, created on 2022-10-13 23:07:25
   from 'C:\xampp\htdocs\WEB2-tp-bidi\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63408f121b88b9_24197218',
+  'unifunc' => 'content_63487e0d22fd39_93554153',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b48c46570de667d04b9ae5fd445058f1a022648' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2-tp-bidi\\templates\\header.tpl',
-      1 => 1665175257,
+      1 => 1665695232,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_63408f121b88b9_24197218 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63487e0d22fd39_93554153 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <base href="home">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -43,6 +43,9 @@ function content_63408f121b88b9_24197218 (Smarty_Internal_Template $_smarty_tpl)
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="https://localhost/WEB2-TP-BIDI/teams">Equipos</a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="logout">Logout</a>
                   </li>
                 </ul>
               </div>

@@ -4,7 +4,7 @@
  <label for="contrasenia"class="form-label">Contraseña <input name="contrasenia" type="password" class="form-control" id="password" required></label>
  <input type="submit" value="Registrarse" id="btn_registrar"class="btn btn-primary">
  </form>
-<form id="form-login" class="formLogin" action="login" method=POST>
+<form id="form-login" class="formLogin" action="verifyUser" method=POST>
  <label for="nombre"class="form-label">Usuario <input name="nombre" type="text" class="form-control" required></label>
  <label for="email"class="form-label">e-mail <input name="email" type="email" class="form-control" required></label>                                     
  <label for="contrasenia"class="form-label">Contraseña <input name="contrasenia" type="password" class="form-control" id="password" required></label>

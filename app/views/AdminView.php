@@ -6,12 +6,7 @@ class AdminView
   public function showHome()
   {
     $smarty = new Smarty();
-    $smarty->display('templates/header.tpl'); // muestro el template        
-  }
-  public function showSignUp(){
-    $smarty = new  Smarty();
-    $smarty->display('templates/header.tpl');
-    $smarty->display('templates/signUp.tpl');
+    $smarty->display('templates/header.tpl'); // muestro el template home        
   }
   public function showUpdate($ligas,$equipos){
     $smarty = new  Smarty();
