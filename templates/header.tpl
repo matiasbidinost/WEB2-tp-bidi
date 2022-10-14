@@ -21,6 +21,12 @@
                   <li class="nav-item">
                     <a class="nav-link" href="https://localhost/WEB2-TP-BIDI/teams">Equipos</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="logout">Logout</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="adminPanel">Panel Administrativo</a>
+                  </li>
                 </ul>
               </div>
             </div>

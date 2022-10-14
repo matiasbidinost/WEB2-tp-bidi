@@ -8,11 +8,6 @@ class AdminView
     $smarty = new Smarty();
     $smarty->display('templates/header.tpl'); // muestro el template        
   }
-  public function showSignUp(){
-    $smarty = new  Smarty();
-    $smarty->display('templates/header.tpl');
-    $smarty->display('templates/signUp.tpl');
-  }
   public function showUpdate($ligas,$equipos){
     $smarty = new  Smarty();
     $smarty->display('templates/header.tpl');
