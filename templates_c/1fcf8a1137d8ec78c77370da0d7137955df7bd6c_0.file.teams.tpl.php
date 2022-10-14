@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-10 01:54:48
+/* Smarty version 4.2.1, created on 2022-10-14 21:27:18
   from 'C:\xampp\htdocs\WEB2-tp-bidi\templates\teams.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_63435f48c213e0_59078251',
+  'unifunc' => 'content_6349b81638e197_86515263',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1fcf8a1137d8ec78c77370da0d7137955df7bd6c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2-tp-bidi\\templates\\teams.tpl',
-      1 => 1665349093,
+      1 => 1665775589,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_63435f48c213e0_59078251 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6349b81638e197_86515263 (Smarty_Internal_Template $_smarty_tpl) {
 ?><ul class="teamList">
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['equipos']->value, 'teams');

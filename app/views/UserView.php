@@ -1,8 +1,19 @@
 <?php
 require_once('libs/Smarty.class.php');
+require_once('helpers/auth.helper.php');
 
-class AdminView
+class UserView
 {
+  private $smarty;
+
+  public function __construct(){
+        $authHelper = new AuthHelper();
+        $nombre = $authHelper->getLoggedUserName();
+        
+        $this->smarty = new Smarty();     
+        $this->smarty->assign('nombre', $nombre);
+
+  }
   public function showHome()
   {
     $smarty = new Smarty();
@@ -10,7 +21,8 @@ class AdminView
   }
   public function showUpdate($ligas,$equipos){
     $smarty = new  Smarty();
-    $smarty->display('templates/headerAdmin.tpl');
+    $smarty->display('templates/header.tpl');
+    // $smarty->display('templates/headerAdmin.tpl');
     $smarty->assign('ligas', $ligas);
     $smarty->assign('equipos', $equipos);
     $smarty->display('templates/adminEdit.tpl');

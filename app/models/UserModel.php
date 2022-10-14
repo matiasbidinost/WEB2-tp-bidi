@@ -1,5 +1,5 @@
 <?php
-class AdminModel
+class UserModel
 {
   private $db;
   public function __construct()

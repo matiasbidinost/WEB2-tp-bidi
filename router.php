@@ -1,7 +1,7 @@
 <?php
 require_once './app/controllers/LeagueController.php';
 require_once './app/controllers/TeamController.php';
-require_once './app/controllers/AdminController.php';
+require_once './app/controllers/UserController.php';
 define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
 // lee la acción
@@ -16,7 +16,7 @@ if (!empty($_GET['action'])) { //si no se escribe home, entra igual al home (tod
 $param = explode('/', $action);
 $leagueController = new LeagueController();
 $teamController = new TeamController();
-$adminController = new AdminController();
+$userController = new UserController();
 switch ($param[0]) {
     case 'home':
         $leagueController->showHome();
@@ -45,16 +45,16 @@ switch ($param[0]) {
     break;
     //parte de registro y admin
     case 'register':
-        $adminController->register();
+        $userController->register();
     break;
     case 'login':
-        $adminController->login();
+        $userController->login();
     break;
     case'adminPanel':
-      $adminController->showAdmin();
+      $userController->showAdmin();
     break;
     case'logout':
-      $adminController->logout();
+      $userController->logout();
     break;
       // ---------------
     // Parte de leagues

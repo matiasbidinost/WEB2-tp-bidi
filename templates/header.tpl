@@ -20,7 +20,12 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="https://localhost/WEB2-TP-BIDI/teams">Equipos</a>
-                  </li>
+                    </li>
+                    {if isset($nombre)}
+                        <span class="navbar-text">{$nombre}</span>
+                        <a class="nav-item nav-link" href="logout">LOGOUT</a>
+                    {/if}
+
                 </ul>
               </div>
             </div>
