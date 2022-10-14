@@ -12,10 +12,10 @@ class LeagueModel
     $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);
   }
-  public function get_team_by_league($id_liga)
+  public function get_team_by_league($id_fk_liga)
   {
     $query = $this->db->prepare('SELECT * FROM `equipos` WHERE `id_fk_liga`=?');
-    $query->execute([$id_liga]);
+    $query->execute([$id_fk_liga]);
     $equipo = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
     return $equipo;
   }
@@ -23,7 +23,7 @@ class LeagueModel
   {
     $query = $this->db->prepare('SELECT * FROM `ligas` WHERE `idLiga`=?');
     $query->execute([$historia]);
-    $liga = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
+    $liga = $query->fetchAll(PDO::FETCH_OBJ);
     return $liga;
   }
   // Agrego liga de LEAGUES

@@ -10,7 +10,7 @@ class AdminView
   }
   public function showUpdate($ligas,$equipos){
     $smarty = new  Smarty();
-    $smarty->display('templates/header.tpl');
+    $smarty->display('templates/headerAdmin.tpl');
     $smarty->assign('ligas', $ligas);
     $smarty->assign('equipos', $equipos);
     $smarty->display('templates/adminEdit.tpl');
@@ -18,14 +18,14 @@ class AdminView
     
   public function showSuccess(){
     $smarty = new Smarty();
-    $smarty->display('templates/header.tpl');
+    $smarty->display('templates/headerAdmin.tpl');
     $smarty->display('templates/success.tpl');
-    header("refresh:2; url=home" );
+    header("refresh:1; url=adminPanel" );
   }
   public function showError(){
     $smarty = new Smarty();
     $smarty->display('templates/header.tpl');
     $smarty->display('templates/error.tpl'); 
-    header("refresh:2; url=home" );
+    header("refresh:2; url=home");
   }
 }

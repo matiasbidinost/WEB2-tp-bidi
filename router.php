@@ -21,11 +21,8 @@ switch ($param[0]) {
     case 'home':
         $leagueController->showHome();
         $leagueController->showForm();
-        
-        break;
-    case 'teams':
-        $teamController->showTeams();
-        break;
+    break;
+    //mostrando ligas por param diff de 0
     case 'leagues':
         if (isset($param[1])) { //primero chequeo q haya un parametro 1 seteado
             if (intval($param[1])) { //luego chequeo q el param 1 sea un numero y no otra cosa
@@ -46,6 +43,7 @@ switch ($param[0]) {
             $leagueController->showLeague();
         }
     break;
+    //parte de registro y admin
     case 'register':
         $adminController->register();
     break;
@@ -70,7 +68,10 @@ switch ($param[0]) {
         $leagueController->modifyLeague();
     break;
     // ---------------
-    // parte de equipos
+    // parte de equipos 
+    case 'teams':
+        $teamController->showTeams();
+    break;
     case'deleteTeams':
         $teamController->deleteTeams();
     break;

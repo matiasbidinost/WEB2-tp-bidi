@@ -65,5 +65,9 @@ Anda el registrarse y loguearse con un usuario, y cuando te logueas con el usuar
 Paso adminController funciones de modificar, borrar, y agregar a sus respectivos controladores. (LeagueController - TeamController)
 De sesion tengo: Registro y guarda como HASH, ingreso con el mismo usuario y password y compruebo, si anda me lleva a la página LOGIN, allí puedo modificar lo que me apetezca como admin. Si intento ir por /login me tira error.
 Me faltaría la parte de LOGOUT y que me mantenga la U_SESSION
----siguientes pasos--------------------------------------------------------------------------------------------------
+
+14/10 //matias
+Solucionado el problema de eliminar ligas, arreglo de rutas, agregue un par de tpl mas, mejore semantica, ordene el router, inclui un header para admin y un error league en caso de que pida eliminar una liga con teams adentro, logout completo por vos, session tambien completada por juan, queda cargar imagenes y arreglar estilos (yo me encargo de estilos)
+
+---siguientes pasos------------------------------------------------------------------------------------------------
 -PLUS: agregar estilos e imagenes de fondo para mejorar el tp, NO USAR TIPOGRAFIA CON REMATE

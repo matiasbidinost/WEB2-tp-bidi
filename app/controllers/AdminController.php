@@ -56,6 +56,7 @@ class AdminController
     session_destroy();
     header('Location: home');
     die();
+  }
   private function CheckLoggedIn(){
     session_start();
     if(!isset($_SESSION['nombre'])){

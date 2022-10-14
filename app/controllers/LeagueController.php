@@ -29,9 +29,9 @@ class LeagueController
       $this->leagueView->showLiga($ligas);
     }
   }
-  public function showTeamsInThisLeague($id_liga)
+  public function showTeamsInThisLeague($id_fk_liga)
   {
-    $equipos = $this->leagueModel->get_team_by_league($id_liga);
+    $equipos = $this->leagueModel->get_team_by_league($id_fk_liga);
     if (!empty($equipos)) {
       $this->leagueView->showTeams($equipos);
     }
@@ -61,13 +61,19 @@ class LeagueController
   // Borro ligas
   public function deleteLeague(){
   $idLiga = $_POST['idLiga'];
+  $id_fk_liga = $_POST['idLiga'];
 
   if(isset($_POST) and !empty($_POST)){
+  $equipos=$this->leagueModel->get_team_by_league($id_fk_liga);
+  if(empty($equipos)){
   $this->leagueModel->delete_League($idLiga);
     $this->leagueView->showSuccess();
    } else {
-    $this->leagueView->showError();
+    $this->leagueView->showLeagueError($equipos);
   }
+}else{
+  $this->leagueView->showError();
+}
 }
 //  Modificar leagues
  public function modifyLeague(){
