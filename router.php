@@ -55,24 +55,27 @@ switch ($param[0]) {
     case 'login':
         $adminController->login();
     break;
+    // ---------------
+    // Parte de leagues
     case 'newLeague':
-            $adminController->newLeague();
+            $leagueController->newLeague();
     break;
     case 'deleteLeague':
-        $adminController->deleteLeague();
+        $leagueController->deleteLeague();
     break;
     case'modifyLeague':
-        $adminController->modifyLeague();
+        $leagueController->modifyLeague();
     break;
+    // ---------------
     // parte de equipos
     case'deleteTeams':
-        $adminController->deleteTeams();
+        $teamController->deleteTeams();
     break;
     case'newTeams':
-        $adminController->newTeams();
+        $teamController->newTeams();
     break;
     case'modifyTeams':
-        $adminController->modifyTeams();
+        $teamController->modifyTeams();
     break;
 
     default:

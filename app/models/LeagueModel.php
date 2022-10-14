@@ -26,4 +26,19 @@ class LeagueModel
     $liga = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
     return $liga;
   }
+  // Agrego liga de LEAGUES
+  public function new_League($logo,$liga,$record,$historia){
+   $query = $this->db->prepare ('INSERT INTO ligas (logo, liga, record, historia) VALUES (?, ?, ?, ?) '); 
+   $query->execute([$logo,$liga,$record,$historia]); 
+  }  
+ //  BORRO LEAGUES
+  public function delete_League($idLiga){
+    $query = $this->db->prepare ('DELETE FROM `ligas` WHERE `idLiga` = ?'); 
+    $query->execute([$idLiga]); 
+  }  
+  // Modifico leagues  
+  public function modifyL($logo,$liga,$record,$historia, $idLiga){
+    $query = $this->db->prepare ("UPDATE ligas SET logo=?, liga=?, record=?, historia=? WHERE idLiga=?");
+   $query->execute([$logo,$liga,$record,$historia,$idLiga]); 
+  }  
 }

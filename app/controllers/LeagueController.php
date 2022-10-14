@@ -43,4 +43,46 @@ class LeagueController
       $this->leagueView->show_History($historyLeague);
     }
   }
+  // Elimino, agrego, modificos LEAGUES
+    public function newLeague(){
+    $logo = $_POST['logo']; 
+    $liga = $_POST['liga']; 
+    $record = $_POST['record']; 
+    $historia = $_POST['historia'];
+
+    if(isset($_POST) and !empty($_POST)){
+    $this->leagueModel->new_League($logo,$liga,$record,$historia);
+    
+    $this->leagueView->showSuccess();
+   } else {
+    $this->leagueView->showError();
+  }
+  }
+  // Borro ligas
+  public function deleteLeague(){
+  $idLiga = $_POST['idLiga'];
+
+  if(isset($_POST) and !empty($_POST)){
+  $this->leagueModel->delete_League($idLiga);
+    $this->leagueView->showSuccess();
+   } else {
+    $this->leagueView->showError();
+  }
+}
+//  Modificar leagues
+ public function modifyLeague(){
+   $logo = $_POST['logo']; 
+   $liga = $_POST['liga']; 
+   $record = $_POST['record']; 
+   $historia = $_POST['historia'];
+   $idLiga = $_POST['idLiga'];
+
+  if(isset($_POST) and !empty($_POST)){
+  $this->leagueModel->modifyL($logo,$liga,$record,$historia,$idLiga);
+  
+    $this->leagueView->showSuccess();
+   } else {
+    $this->leagueView->showError();
+  }
+}
 }
