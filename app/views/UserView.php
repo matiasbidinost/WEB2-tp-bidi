@@ -7,11 +7,9 @@ class UserView
   private $smarty;
 
   public function __construct(){
-        $authHelper = new AuthHelper();
-        $nombre = $authHelper->getLoggedUserName();
-        
-        $this->smarty = new Smarty();     
-        $this->smarty->assign('nombre', $nombre);
+    $authHelper = new AuthHelper();    
+    $this->smarty = new Smarty();     
+    
 
   }
   public function showHome()
@@ -21,7 +19,6 @@ class UserView
   }
   public function showUpdate($ligas,$equipos){
     $smarty = new  Smarty();
-    $smarty->display('templates/header.tpl');
     // $smarty->display('templates/headerAdmin.tpl');
     $smarty->assign('ligas', $ligas);
     $smarty->assign('equipos', $equipos);

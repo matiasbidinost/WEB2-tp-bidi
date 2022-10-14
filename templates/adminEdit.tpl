@@ -1,3 +1,5 @@
+{include file="header.tpl"}
+
 {*FORM PARA AGREGAR UNA NUEVA LIGA*}
 <form id="form-login" action="newLeague" method="POST">
 <p class="adminLeague">Agregar liga</p>
