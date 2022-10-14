@@ -25,10 +25,12 @@ class AdminView
     $smarty = new Smarty();
     $smarty->display('templates/header.tpl');
     $smarty->display('templates/success.tpl');
+    header("refresh:1; url=home" );
   }
   public function showError(){
     $smarty = new Smarty();
     $smarty->display('templates/header.tpl');
     $smarty->display('templates/error.tpl'); 
+    header("refresh:1; url=home" );
   }
 }

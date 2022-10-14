@@ -29,6 +29,7 @@ class AdminController
   }      
   // Tomo un username y compruebo los q me trae mi post de logueo
   public function login(){  
+    if(!empty($_POST['nombre'])&&!empty($_POST['contrasenia'])){
   $nombre = $_POST['nombre'];
   $contrasenia = $_POST['contrasenia']; 
   $user = $this->adminModel->getByUsername($nombre);
@@ -43,6 +44,10 @@ class AdminController
     } else {
       $this->adminView->showError();
     }
+  } else {
+      $this->adminView->showError();
+    }
+  
 
 }
 //pasarlo al league controller o al team controller
