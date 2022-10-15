@@ -13,7 +13,9 @@ class LeagueController
   {
     $this->leagueModel = new LeagueModel();
     $this->leagueView = new LeagueView();
-    if(session_status() != PHP_SESSION_ACTIVE){session_start();}
+    if(session_status() != PHP_SESSION_ACTIVE){
+      session_start();
+    }
 
   }
   public function showForm()
