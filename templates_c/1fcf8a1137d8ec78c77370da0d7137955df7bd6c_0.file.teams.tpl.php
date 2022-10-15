@@ -1,28 +1,31 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-14 21:27:18
+/* Smarty version 4.2.1, created on 2022-10-15 02:18:11
   from 'C:\xampp\htdocs\WEB2-tp-bidi\templates\teams.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6349b81638e197_86515263',
+  'unifunc' => 'content_6349fc43da7010_03635541',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1fcf8a1137d8ec78c77370da0d7137955df7bd6c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2-tp-bidi\\templates\\teams.tpl',
-      1 => 1665775589,
+      1 => 1665793056,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:header.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6349b81638e197_86515263 (Smarty_Internal_Template $_smarty_tpl) {
-?><ul class="teamList">
+function content_6349fc43da7010_03635541 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+<ul class="teamList">
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['equipos']->value, 'teams');
 $_smarty_tpl->tpl_vars['teams']->do_else = true;

@@ -1,3 +1,4 @@
+{include file="header.tpl"}
 <ul class="teamList">
   {foreach from=$equipos item=teams}
     <li><h1>{$teams->nombre}</h1><img src="https://localhost/WEB2-TP-BIDI/{$teams->logo}" width="100" height="100"></li>

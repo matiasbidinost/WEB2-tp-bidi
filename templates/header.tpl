@@ -9,6 +9,7 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
+        <img src="./imagen/basquet.png" width="50px" height="50px">
         <a class="navbar-brand" href="https://localhost/WEB2-TP-BIDI/home">Básquet</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,13 +26,19 @@
             </li>
              {if !empty($smarty.session.NOMBRE)} 
               <li class="nav-item">
-              <span class="navbar-text">{$smarty.session.NOMBRE}</span>
-              <a class="nav-item nav-link" href="logout">LOGOUT</a>
+              <a class="nav-link" href="adminPanel">Panel Administrativo</a>
               </li>
-             {/if} 
-
-          </ul>
-        </div>
+              <li class="nav-item">
+              <a class="nav-item nav-link" href="logout">LOGOUT</a>
+              </li> 
+            {/if} 
+            
+            </ul>
+            </div>
+            {if !empty($smarty.session.NOMBRE)} 
+            <img src="./imagen/iconouser.png" width="50px" height="50px">
+            <span class="navbar-text">{$smarty.session.NOMBRE}</span>
+            {/if} 
       </div>
     </nav>
 </header>

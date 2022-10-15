@@ -37,7 +37,7 @@ u {
   text-align: center;
   font-size: 45px;
 }
-.sucess{
+.sucess {
   background-color: rgb(29, 112, 12);
   padding: 0%;
   height: 60px;
@@ -45,11 +45,18 @@ u {
   text-align: center;
   font-size: 45px;
 }
-.error{
+.error {
   background-color: rgb(184, 4, 4);
   padding: 0%;
   height: 60px;
   color: white;
   text-align: center;
   font-size: 45px;
+}
+.navbar-text {
+  color: red;
+}
+.nav-link:hover,
+.navbar-brand:hover {
+  background-color: tan;
 }

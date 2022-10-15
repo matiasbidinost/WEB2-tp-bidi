@@ -19,7 +19,6 @@ class UserView
   }
   public function showUpdate($ligas,$equipos){
     $smarty = new  Smarty();
-    // $smarty->display('templates/headerAdmin.tpl');
     $smarty->assign('ligas', $ligas);
     $smarty->assign('equipos', $equipos);
     $smarty->display('templates/adminEdit.tpl');
