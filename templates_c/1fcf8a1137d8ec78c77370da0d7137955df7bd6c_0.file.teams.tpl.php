@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-15 02:18:11
+/* Smarty version 4.2.1, created on 2022-10-15 02:47:03
   from 'C:\xampp\htdocs\WEB2-tp-bidi\templates\teams.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6349fc43da7010_03635541',
+  'unifunc' => 'content_634a0307436d30_94630361',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1fcf8a1137d8ec78c77370da0d7137955df7bd6c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2-tp-bidi\\templates\\teams.tpl',
-      1 => 1665793056,
+      1 => 1665794565,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_6349fc43da7010_03635541 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634a0307436d30_94630361 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <ul class="teamList">

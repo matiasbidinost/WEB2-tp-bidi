@@ -18,8 +18,14 @@ class UserController
     $this->userView = new UserView();
     $this->authHelper = new AuthHelper();
   }
+  public function showHome()
+  {
+    session_start();
+    $this->userView->showHome();
+  }
   public function showAdmin()
   {
+    session_start();
     $this->authHelper->CheckLoggedIn();
     $ligas = $this->userModel->getAllLigas();
     $equipos = $this->userModel->get_teams();

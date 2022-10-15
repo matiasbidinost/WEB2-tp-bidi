@@ -19,7 +19,7 @@ $teamController = new TeamController();
 $userController = new UserController();
 switch ($param[0]) {
     case 'home':
-        $leagueController->showHome();
+        $userController->showHome();
         $leagueController->showForm();
     break;
     //mostrando ligas por param diff de 0

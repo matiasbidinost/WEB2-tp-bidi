@@ -1,3 +1,4 @@
+{include file="header.tpl"}
 <form id="form-login" class="formRegistro" action="register" method=POST>
  <label for="nombre"class="form-label">Elija un nombre de usuario <input name="nombre" type="text" class="form-control" required></label>
  <label for="email"class="form-label">Elija un e-mail <input name="email" type="email" class="form-control" required></label>                                     

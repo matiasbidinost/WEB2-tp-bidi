@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-10-15 02:12:21
+/* Smarty version 4.2.1, created on 2022-10-15 02:43:29
   from 'C:\xampp\htdocs\WEB2-tp-bidi\templates\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6349fae59c9b26_95461462',
+  'unifunc' => 'content_634a0231c50d73_30690903',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0b48c46570de667d04b9ae5fd445058f1a022648' => 
     array (
       0 => 'C:\\xampp\\htdocs\\WEB2-tp-bidi\\templates\\header.tpl',
-      1 => 1665792717,
+      1 => 1665794543,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6349fae59c9b26_95461462 (Smarty_Internal_Template $_smarty_tpl) {
+function content_634a0231c50d73_30690903 (Smarty_Internal_Template $_smarty_tpl) {
 ?><base href="home">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">

@@ -14,8 +14,7 @@ class UserView
   }
   public function showHome()
   {
-    $smarty = new Smarty();
-    $smarty->display('templates/header.tpl'); // muestro el template        
+    $smarty = new Smarty();      
   }
   public function showUpdate($ligas,$equipos){
     $smarty = new  Smarty();
