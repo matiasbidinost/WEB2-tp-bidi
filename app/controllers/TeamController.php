@@ -13,12 +13,12 @@ class TeamController
   {
     $this->teamModel = new TeamModel();
     $this->teamView = new TeamView();
+    if(session_status() != PHP_SESSION_ACTIVE){session_start();}
   }
   
 
   public function showTeams()
   {
-    session_start();
     $equipos = $this->teamModel->get_teams();
     if (!empty($equipos)){
       $this->teamView->showTeams($equipos);

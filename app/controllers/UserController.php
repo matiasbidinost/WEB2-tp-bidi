@@ -17,15 +17,14 @@ class UserController
     $this->userModel = new UserModel();
     $this->userView = new UserView();
     $this->authHelper = new AuthHelper();
+    if(session_status() != PHP_SESSION_ACTIVE){session_start();}
   }
   public function showHome()
   {
-    session_start();
     $this->userView->showHome();
   }
   public function showAdmin()
   {
-    session_start();
     $this->authHelper->CheckLoggedIn();
     $ligas = $this->userModel->getAllLigas();
     $equipos = $this->userModel->get_teams();
