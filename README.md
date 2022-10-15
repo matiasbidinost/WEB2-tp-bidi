@@ -1,4 +1,7 @@
 # WEB2-tp-bidi
+usuario: matias
+email: matias@matias
+contraseña: 123456
 
 este git es para el tp de la materia de web2 cursada 2022 tudai (3arr)
 Matias y Juan
@@ -69,5 +72,7 @@ Me faltaría la parte de LOGOUT y que me mantenga la U_SESSION
 14/10 //matias
 Solucionado el problema de eliminar ligas, arreglo de rutas, agregue un par de tpl mas, mejore semantica, ordene el router, inclui un header para admin y un error league en caso de que pida eliminar una liga con teams adentro, logout completo por vos, session tambien completada por juan, queda cargar imagenes y arreglar estilos (yo me encargo de estilos)
 
----siguientes pasos------------------------------------------------------------------------------------------------
+---siguientes pasos---------------------------------------------------------------------------------------------
+QUE SE PUEDA EDITAR UN SOLO CAMPO DEL ITEM (HACER UN SELECT PARA QUE EL USUARIO ELIJA QUE MODIFICAR)
 -PLUS: agregar estilos e imagenes de fondo para mejorar el tp, NO USAR TIPOGRAFIA CON REMATE
+-FUNCION AGREGAR IMAGENES: existe una funcion de php que guarda imagenes y las manda
