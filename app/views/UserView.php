@@ -25,9 +25,8 @@ class UserView
     
   public function showSuccess(){
     $smarty = new Smarty();
-    $smarty->display('templates/headerAdmin.tpl');
     $smarty->display('templates/success.tpl');
-    header("refresh:1; url=adminPanel" );
+    header("refresh:2; url=home" );
   }
   public function showError(){
     $smarty = new Smarty();
