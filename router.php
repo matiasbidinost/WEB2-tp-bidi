@@ -22,7 +22,7 @@ switch ($param[0]) {
         $userController->showHome();
         $leagueController->showForm();
     break;
-    //mostrando ligas por param diff de 0
+    //Muestro leagues por parámetros, dependiendo de parámetros, contiene relación con EQUIPO, EJ: si Equipo Peñarol pertenece a LIGA ARGENTINA, equipo PEÑAROL se mantiene y se muestra dentro de LIGA ARGENTINA.
     case 'leagues':
         if (isset($param[1])) { //primero chequeo q haya un parametro 1 seteado
             if (intval($param[1])) { //luego chequeo q el param 1 sea un numero y no otra cosa
