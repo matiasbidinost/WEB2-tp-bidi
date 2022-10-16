@@ -1,16 +1,16 @@
 {include file="header.tpl"}
 
 {*FORM PARA AGREGAR UNA NUEVA LIGA*}
-<form id="form-login" action="newLeague" method="POST">
+<form id="form-login" action="newLeague" method="POST" enctype="multipart/form-data">
   <p class="adminLeague">Agregar liga</p>
-  <label class="form-label" for="logo">Logo de la liga: <input name="logo" type="text" class="form-control"
-      required></label>
-  <label class="form-label" for="liga">Nombre de la liga: <input name="liga" type="text" class="form-control"
-      required></label>
-  <label class="form-label" for="record">Records logrados: <input name="record" type="text" class="form-control"
-      required></label>
-  <label class="form-label" for="historia">Historia: <input name="historia" type="text" class="form-control"
-      required></label>
+  <label class="form-label" for="logo">Logo:
+  <input type="file" name="input_name" id="imageToUpload" required></label>
+  <label class="form-label" for="liga">Nombre de la liga: 
+  <input name="liga" type="text" class="form-control" required></label>
+  <label class="form-label" for="record">Records logrados: 
+  <input name="record" type="text" class="form-control" required></label>
+  <label class="form-label" for="historia">Historia: 
+  <input name="historia" type="text" class="form-control" required></label>
   <input type="submit" value="Agregar" class="btn btn-primary">
 </form>
 

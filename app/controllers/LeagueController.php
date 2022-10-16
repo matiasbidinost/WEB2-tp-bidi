@@ -48,18 +48,20 @@ class LeagueController
   }
   // Elimino, agrego, modificos LEAGUES
     public function newLeague(){
-    $logo = $_POST['logo']; 
     $liga = $_POST['liga']; 
     $record = $_POST['record']; 
     $historia = $_POST['historia'];
-
     if(isset($_POST) and !empty($_POST)){
-    $this->leagueModel->new_League($logo,$liga,$record,$historia);
-    
+    if($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" || $_FILES['input_name']['type'] == "image/png" ) {
+      $this->leagueModel->new_League($liga,$record,$historia, $_FILES['input_name']['tmp_name']);
+    }
+     else {
+      $this->leagueModel->new_League($liga,$record,$historia);
+     }
     $this->leagueView->showSuccess();
    } else {
     $this->leagueView->showError();
-  }
+    }
   }
   // Borro ligas
   public function deleteLeague(){

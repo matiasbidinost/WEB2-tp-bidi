@@ -26,11 +26,19 @@ class LeagueModel
     $liga = $query->fetchAll(PDO::FETCH_OBJ);
     return $liga;
   }
-  // Agrego liga de LEAGUES
-  public function new_League($logo,$liga,$record,$historia){
-   $query = $this->db->prepare ('INSERT INTO ligas (logo, liga, record, historia) VALUES (?, ?, ?, ?) '); 
-   $query->execute([$logo,$liga,$record,$historia]); 
-  }  
+  public function new_League($liga,$record,$historia, $logo=null){
+    $pathImg= null;
+    if($logo)
+    $pathImg=$this->uploadImage($logo);
+   $query = $this->db->prepare ('INSERT INTO ligas (liga, record, historia, logo) VALUES (?, ?, ?, ?) '); 
+   $query->execute([$liga,$record,$historia,$pathImg]);     
+  }
+  private function uploadImage($logo){
+    $target = 'img/task/' . uniqid() . '.jpg';
+    move_uploaded_file($logo, $target);
+    return $target;
+  }
+
  //  BORRO LEAGUES
   public function delete_League($idLiga){
     $query = $this->db->prepare ('DELETE FROM `ligas` WHERE `idLiga` = ?'); 
