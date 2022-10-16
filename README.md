@@ -72,7 +72,10 @@ Me faltaría la parte de LOGOUT y que me mantenga la U_SESSION
 14/10 //matias
 Solucionado el problema de eliminar ligas, arreglo de rutas, agregue un par de tpl mas, mejore semantica, ordene el router, inclui un header para admin y un error league en caso de que pida eliminar una liga con teams adentro, logout completo por vos, session tambien completada por juan, queda cargar imagenes y arreglar estilos (yo me encargo de estilos)
 
+16/10 //matias
+Ya se puede editar un solo item, modifique el if de cada modificar (si vos mandas el $_post sin especificar, podes dejar la opcion "seleccionar Equipo" y te va a tomar el cambio igual aunque no suceda nada, ahora ya no)
+Ademas modifique las rutas de AdminEdit asi les llegan las imagenes correctamente
+
 ---siguientes pasos---------------------------------------------------------------------------------------------
-QUE SE PUEDA EDITAR UN SOLO CAMPO DEL ITEM (HACER UN SELECT PARA QUE EL USUARIO ELIJA QUE MODIFICAR)
 -PLUS: agregar estilos e imagenes de fondo para mejorar el tp, NO USAR TIPOGRAFIA CON REMATE
 -FUNCION AGREGAR IMAGENES: existe una funcion de php que guarda imagenes y las manda

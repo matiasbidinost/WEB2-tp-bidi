@@ -36,9 +36,25 @@ class LeagueModel
     $query = $this->db->prepare ('DELETE FROM `ligas` WHERE `idLiga` = ?'); 
     $query->execute([$idLiga]); 
   }  
-  // Modifico leagues  
-  public function modifyL($logo,$liga,$record,$historia, $idLiga){
-    $query = $this->db->prepare ("UPDATE ligas SET logo=?, liga=?, record=?, historia=? WHERE idLiga=?");
-   $query->execute([$logo,$liga,$record,$historia,$idLiga]); 
-  }  
+  // Modifico leagues
+  //logo  
+  public function modify_Logo($logo, $idLiga){
+    $query = $this->db->prepare ("UPDATE ligas SET logo=?WHERE idLiga=?");
+   $query->execute([$logo,$idLiga]); 
+  }
+  //nombre liga
+  public function modify_Liga($liga,$idLiga){
+    $query = $this->db->prepare ("UPDATE ligas SET liga=?WHERE idLiga=?");
+   $query->execute([$liga,$idLiga]); 
+  } 
+  //record
+  public function modify_Record($record,$idLiga){
+    $query = $this->db->prepare ("UPDATE ligas SET record=?WHERE idLiga=?");
+   $query->execute([$record,$idLiga]); 
+  } 
+  //historia
+  public function modify_History($historia,$idLiga){
+    $query = $this->db->prepare ("UPDATE ligas SET logo=?WHERE idLiga=?");
+   $query->execute([$historia,$idLiga]); 
+  } 
 }

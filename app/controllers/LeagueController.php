@@ -79,19 +79,51 @@ class LeagueController
 }
 }
 //  Modificar leagues
- public function modifyLeague(){
+ public function modifyLogo(){
    $logo = $_POST['logo']; 
-   $liga = $_POST['liga']; 
-   $record = $_POST['record']; 
-   $historia = $_POST['historia'];
    $idLiga = $_POST['idLiga'];
 
-  if(isset($_POST) and !empty($_POST)){
-  $this->leagueModel->modifyL($logo,$liga,$record,$historia,$idLiga);
+  if((isset($_POST['idLiga']) and !empty($_POST['idLiga']))and(isset($_POST['logo']) and !empty($_POST['logo']))){
+  $this->leagueModel->modify_Logo($logo,$idLiga);
   
     $this->leagueView->showSuccess();
    } else {
     $this->leagueView->showError();
   }
 }
+public function modifyLigaN(){
+  $liga= $_POST['liga'];
+  $idLiga = $_POST['idLiga'];
+   if((isset($_POST['idLiga']) and !empty($_POST['idLiga']))and(isset($_POST['liga']) and !empty($_POST['liga']))){
+  $this->leagueModel->modify_Liga($liga,$idLiga);
+  
+    $this->leagueView->showSuccess();
+   } else {
+    $this->leagueView->showError();
+  }
+}
+public function modifyRecord(){
+ $record= $_POST['record'];
+ $idLiga = $_POST['idLiga']; 
+  
+ if((isset($_POST['idLiga']) and !empty($_POST['idLiga']))and(isset($_POST['record']) and !empty($_POST['record']))){
+  $this->leagueModel->modify_Record($record,$idLiga);
+  
+    $this->leagueView->showSuccess();
+   } else {
+    $this->leagueView->showError();
+  }
+}
+public function modifyHistory(){
+ $historia= $_POST['historia'];
+ $idLiga = $_POST['idLiga']; 
+  if((isset($_POST['idLiga']) and !empty($_POST['idLiga']))and(isset($_POST['historia']) and !empty($_POST['historia']))){
+  $this->leagueModel->modify_History($historia,$idLiga);
+  
+    $this->leagueView->showSuccess();
+   } else {
+    $this->leagueView->showError();
+  }
+}
+
 }

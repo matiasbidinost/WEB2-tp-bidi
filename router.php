@@ -21,8 +21,8 @@ switch ($param[0]) {
     case 'home':
         $userController->showHome();
         $leagueController->showForm();
-    break;
-    //mostrando ligas por param diff de 0
+        break;
+        //mostrando ligas por param diff de 0
     case 'leagues':
         if (isset($param[1])) { //primero chequeo q haya un parametro 1 seteado
             if (intval($param[1])) { //luego chequeo q el param 1 sea un numero y no otra cosa
@@ -35,52 +35,76 @@ switch ($param[0]) {
                         $leagueController->showTeamsInThisLeague($param[1]); //league que un id....url/league/1
                     } else {
                     }
-                }else{
+                } else {
                     echo "error 404 not found";
                 }
             } //url/leagues/1
         } else {
             $leagueController->showLeague();
         }
-    break;
-    //parte de registro y admin
+        break;
+        //parte de registro y admin
     case 'register':
         $userController->register();
-    break;
+        break;
     case 'login':
         $userController->login();
-    break;
-    case'adminPanel':
-      $userController->showAdmin();
-    break;
-    case'logout':
-      $userController->logout();
-    break;
-      // ---------------
-    // Parte de leagues
+        break;
+    case 'adminPanel':
+        $userController->showAdmin();
+        break;
+    case 'logout':
+        $userController->logout();
+        break;
+        // ---------------
+        // Parte de leagues
     case 'newLeague':
-            $leagueController->newLeague();
-    break;
+        $leagueController->newLeague();
+        break;
     case 'deleteLeague':
         $leagueController->deleteLeague();
-    break;
-    case'modifyLeague':
-        $leagueController->modifyLeague();
-    break;
-    // ---------------
-    // parte de equipos 
+        break;
+        //modificar
+    case 'modifyLogo':
+        $leagueController->modifyLogo();
+        break;
+    case 'modifyLigaN':
+        $leagueController->modifyLigaN();
+        break;
+    case 'modifyRecord':
+        $leagueController->modifyRecord();
+        break;
+    case 'modifyHistory':
+        $leagueController->modifyHistory();
+        break;
+
+        // ---------------
+        // parte de equipos 
     case 'teams':
         $teamController->showTeams();
-    break;
-    case'deleteTeams':
+        break;
+    case 'deleteTeams':
         $teamController->deleteTeams();
-    break;
-    case'newTeams':
+        break;
+    case 'newTeams':
         $teamController->newTeams();
-    break;
-    case'modifyTeams':
-        $teamController->modifyTeams();
-    break;
+        break;
+        //modificar
+    case 'modifyTeamFk':
+        $teamController->modifyTeamFk();
+        break;
+    case 'modifyTName':
+        $teamController->modifyTName();
+        break;
+    case 'modifyTLogo':
+        $teamController->modifyTLogo();
+        break;
+    case 'modifyTHistory':
+        $teamController->modifyTHistory();
+        break;
+    case 'modifyTPlayers':
+        $teamController->modifyTPlayers();
+        break;
 
     default:
         echo "Error 404 not found";
