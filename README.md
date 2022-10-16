@@ -1,4 +1,5 @@
 # WEB2-tp-bidi
+
 usuario: matias
 email: matias@matias
 contraseña: 123456
@@ -73,8 +74,14 @@ Me faltaría la parte de LOGOUT y que me mantenga la U_SESSION
 Solucionado el problema de eliminar ligas, arreglo de rutas, agregue un par de tpl mas, mejore semantica, ordene el router, inclui un header para admin y un error league en caso de que pida eliminar una liga con teams adentro, logout completo por vos, session tambien completada por juan, queda cargar imagenes y arreglar estilos (yo me encargo de estilos)
 
 16/10 //matias
-Ya se puede editar un solo item, modifique el if de cada modificar (si vos mandas el $_post sin especificar, podes dejar la opcion "seleccionar Equipo" y te va a tomar el cambio igual aunque no suceda nada, ahora ya no)
+Ya se puede editar un solo item, modifique el if de cada modificar (si vos mandas el $\_post sin especificar, podes dejar la opcion "seleccionar Equipo" y te va a tomar el cambio igual aunque no suceda nada, ahora ya no)
 Ademas modifique las rutas de AdminEdit asi les llegan las imagenes correctamente
+
+16/10 Juan
+Puse añadir una foto a AGREGAR LEAGUES, no pude pa modificar Leagues :(
+Acomode que cuando uno es administrador no pueda volver a la pagina de inicio a reingresar una y otra vez con otra session.
+Ahora aparece algo distinto, que a los que no están logueado no aparece :D
+Ya casi estamos
 
 ---siguientes pasos---------------------------------------------------------------------------------------------
 -PLUS: agregar estilos e imagenes de fondo para mejorar el tp, NO USAR TIPOGRAFIA CON REMATE
