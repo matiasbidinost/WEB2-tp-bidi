@@ -53,42 +53,46 @@ class LeagueController
     $historia = $_POST['historia'];
     if(isset($_POST) and !empty($_POST)){
     if($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" || $_FILES['input_name']['type'] == "image/png" ) {
-      $this->leagueModel->new_League($liga,$record,$historia, $_FILES['input_name']['tmp_name']);
-    }
-     else {
-      $this->leagueModel->new_League($liga,$record,$historia);
-     }
-    $this->leagueView->showSuccess();
-   } else {
+      $this->leagueModel->new_League($liga,$record,$historia, $_FILES['input_name']['tmp_name']); 
+      $this->leagueView->showSuccess();
+    } else {
+      $this->leagueView->showError();
+      }} else {
     $this->leagueView->showError();
     }
   }
   // Borro ligas
   public function deleteLeague(){
-  $idLiga = $_POST['idLiga'];
-  $id_fk_liga = $_POST['idLiga'];
-
-  if(isset($_POST) and !empty($_POST)){
-  $equipos=$this->leagueModel->get_team_by_league($id_fk_liga);
-  if(empty($equipos)){
-  $this->leagueModel->delete_League($idLiga);
-    $this->leagueView->showSuccess();
-   } else {
-    $this->leagueView->showLeagueError($equipos);
-  }
-}else{
-  $this->leagueView->showError();
-}
-}
+    $idLiga = $_POST['idLiga']; 
+    $id_fk_liga = $_POST['idLiga'];   
+    if(isset($_POST['idLiga']) and !empty($_POST['idLiga'])){ 
+    if(isset($_POST) and !empty($_POST)){ 
+    $equipos=$this->leagueModel->get_team_by_league($id_fk_liga); 
+    if(empty($equipos)){ 
+    $this->leagueModel->delete_League($idLiga); 
+      $this->leagueView->showSuccess(); 
+     } else { 
+      $this->leagueView->showLeagueError($equipos); 
+    } 
+  }else{ 
+    $this->leagueView->showError(); 
+  } 
+  }else{ 
+    $this->leagueView->showError(); 
+  }  
+  } 
 //  Modificar leagues
- public function modifyLogo(){
-   $logo = $_POST['logo']; 
+ public function modifyLogo(){ 
    $idLiga = $_POST['idLiga'];
 
-  if((isset($_POST['idLiga']) and !empty($_POST['idLiga']))and(isset($_POST['logo']) and !empty($_POST['logo']))){
-  $this->leagueModel->modify_Logo($logo,$idLiga);
+  if((isset($_POST['idLiga']) and !empty($_POST['idLiga']))){
+      if($_FILES['input_name']['type'] == "image/jpg" || $_FILES['input_name']['type'] == "image/jpeg" || $_FILES['input_name']['type'] == "image/png" ){
+  $this->leagueModel->modify_Logo( $_FILES['input_name']['tmp_name'],$idLiga);
   
     $this->leagueView->showSuccess();
+  } else {
+    $this->leagueView->showError();
+  }
    } else {
     $this->leagueView->showError();
   }

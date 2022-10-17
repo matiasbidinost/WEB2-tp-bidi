@@ -15,7 +15,7 @@
 </form>
 
 {*FORM PARA EDITAR UNA LIGA*}
-<form id="form-login" action="modifyLogo" method="POST">
+<form id="form-login" action="modifyLogo" method="POST" enctype="multipart/form-data">
   <p class="adminLeague">Editar Liga</p>
   <select name="idLiga">
     <option value="">Selecionar liga</option>
@@ -23,7 +23,8 @@
       <option value="{$league->idLiga}">{$league->liga}</option>
     {/foreach}
   </select>
-  <label class="form-label" for="logo">Modificar logo: <input name="logo" type="text" class="form-control"></label>
+  <label class="form-label" for="logo">Logo:
+  <input type="file" name="input_name" id="imageToUpload" required></label>
   <input type="submit" value="editar" class="btn btn-primary">
 </form>
 
@@ -79,7 +80,7 @@
 </form>
 
 {*FORM PARA AGREGAR UN NUEVO TEAM*}
-<form id="form-login" action="newTeams" method="POST">
+<form id="form-login" action="newTeams" method="POST" enctype="multipart/form-data">
   <p class="ModifyTeams">Agregar Equipo</p>
   <select name="id_fk_liga">
     <option value="">a que liga pertenece el equipo?</option>
@@ -89,8 +90,8 @@
   </select>
   <label class="form-label" for="nombre">nombre del equipo:
     <input name="nombre" type="text" class="form-control" required /></label>
-  <label class="form-label" for="logo">logo del equipo:
-    <input name="logo" type="text" class="form-control" required /></label>
+    <label class="form-label" for="logo">Logo:
+    <input type="file" name="input_name" id="imageToUpload" required></label>
   <label class="form-label" for="historia">Historia: <input name="historia" type="text" class="form-control"
       required /></label>
   <label class="form-label" for="jugadores">Jugadores:
@@ -129,15 +130,15 @@
   <input type="submit" value="editar" class="btn btn-primary">
 </form>
 {*modifica logo*}
-<form id="form-login" action="modifyTLogo" method="POST">
+<form id="form-login" action="modifyTLogo" method="POST" enctype="multipart/form-data">
   <select name="id_equipo">
     <option value="">Selecionar Equipo</option>
     {foreach from=$equipos item=teams}
       <option value="{$teams->id_equipo}">{$teams->nombre}</option>
     {/foreach}
   </select>
-  <label class="form-label" for="logo">Modificar logo: <input name="logo" type="text" class="form-control"
-      required></label>
+  <label class="form-label" for="logo">Logo:
+  <input type="file" name="input_name" id="imageToUpload" required></label>
   <input type="submit" value="editar" class="btn btn-primary">
 </form>
 {*modifica historia*}

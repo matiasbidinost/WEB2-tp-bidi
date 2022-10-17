@@ -12,9 +12,11 @@ class TeamModel
     $equipo = $query->fetchAll(PDO::FETCH_OBJ); //fetch un solo resultado, lo devolvemos en formato objeto. Es un arreglo
     return $equipo;
    }
-    public function new_Teams($id_fk_liga, $nombre,$logo,$historia,$jugadores){
+    public function new_Teams($id_fk_liga, $nombre,$historia,$jugadores,$logo=null){
+      $pathImg= null;
+      $pathImg=$this->uploadImage($logo);
    $query = $this->db->prepare ('INSERT INTO `equipos`(`id_fk_liga`, `nombre`, `logo`, `historia`, `jugadores`) VALUES (?, ?, ?, ?, ?) '); 
-   $query->execute([$id_fk_liga,$nombre,$logo,$historia,$jugadores]); 
+   $query->execute([$id_fk_liga,$nombre,$historia,$jugadores,$pathImg]); 
   }   
      // BORRO TEAMS
   public function deleteTeams($id_equipo){
@@ -30,9 +32,16 @@ public function modify_TName($nombre,$id_equipo){
   $query = $this->db->prepare ("UPDATE equipos SET nombre=? WHERE id_equipo=?");
  $query->execute([$nombre,$id_equipo]); 
 }
-public function modify_TLogo($logo,$id_equipo){
+public function modify_TLogo($logo=null,$id_equipo){
+  $pathImg= null;
+    $pathImg=$this->uploadImage($logo);
   $query = $this->db->prepare ("UPDATE equipos SET logo=? WHERE id_equipo=?");
- $query->execute([$logo,$id_equipo]); 
+ $query->execute([$pathImg,$id_equipo]); 
+}
+private function uploadImage($logo){
+  $target = 'img/task/' . uniqid() . '.jpg';
+  move_uploaded_file($logo, $target);
+  return $target;
 }
 public function modify_THistory($historia,$id_equipo){
   $query = $this->db->prepare ("UPDATE equipos SET historia=? WHERE id_equipo=?");

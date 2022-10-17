@@ -17,7 +17,7 @@
 <h1 class="error">¡Hola {$smarty.session.NOMBRE}!</h1>
   <h3 class="sucess">Bienvenido a la página de Matias y Juan
   </h3>
-  <p>estás logeado como ADMINISTRADOR de ésta Página, puedes modificar y obtener los cambios yendo al PANEL ADMINSITRATIVO
+  <p>estás logeado como ADMINISTRADOR de ésta Página, puedes modificar y obtener los cambios yendo al PANEL ADMINISTRATIVO
 ten cuidado con los cambios que haces, pueden ser perjudiciales para la página y para todos los campos rellenados anteriormente </p>
 {/if}
  </form>

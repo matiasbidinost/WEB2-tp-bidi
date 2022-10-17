@@ -28,7 +28,6 @@ class LeagueModel
   }
   public function new_League($liga,$record,$historia, $logo=null){
     $pathImg= null;
-    if($logo)
     $pathImg=$this->uploadImage($logo);
    $query = $this->db->prepare ('INSERT INTO ligas (liga, record, historia, logo) VALUES (?, ?, ?, ?) '); 
    $query->execute([$liga,$record,$historia,$pathImg]);     
@@ -46,9 +45,11 @@ class LeagueModel
   }  
   // Modifico leagues
   //logo  
-  public function modify_Logo($logo, $idLiga){
+  public function modify_Logo($logo=null, $idLiga){
+      $pathImg= null;
+      $pathImg=$this->uploadImage($logo);
     $query = $this->db->prepare ("UPDATE ligas SET logo=?WHERE idLiga=?");
-   $query->execute([$logo,$idLiga]); 
+   $query->execute([$pathImg,$idLiga]); 
   }
   //nombre liga
   public function modify_Liga($liga,$idLiga){
