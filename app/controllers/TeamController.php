@@ -32,7 +32,7 @@ class TeamController
   {
     $id_equipo = $_POST['id_equipo'];
 
-    if (isset($_POST) and !empty($_POST)) {
+    if ((isset($_POST['id_equipo']) and !empty($_POST['id_equipo']))) {
       $this->teamModel->deleteTeams($id_equipo);
       $this->teamView->showSuccess();
     } else {

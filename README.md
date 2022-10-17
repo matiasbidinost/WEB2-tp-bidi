@@ -83,6 +83,8 @@ Acomode que cuando uno es administrador no pueda volver a la pagina de inicio a 
 Ahora aparece algo distinto, que a los que no están logueado no aparece :D
 Ya casi estamos
 
+16/10 //matias
+Agregue mas estilo y termine las funcionalidades que faltaban. Terminamos
+
 ---siguientes pasos---------------------------------------------------------------------------------------------
--PLUS: agregar estilos e imagenes de fondo para mejorar el tp, NO USAR TIPOGRAFIA CON REMATE
--FUNCION AGREGAR IMAGENES: existe una funcion de php que guarda imagenes y las manda
+-NO HAY MAS PASOS

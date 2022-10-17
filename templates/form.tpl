@@ -15,9 +15,8 @@
 {/if}
 {if !empty($smarty.session.NOMBRE)}
 <h1 class="error">¡Hola {$smarty.session.NOMBRE}!</h1>
-  <h3 class="sucess">Bienvenido a la página de Matias y Juan
+  <h3 class="sucess">Bienvenido a la página de Basquet de juan y matias
   </h3>
-  <p>estás logeado como ADMINISTRADOR de ésta Página, puedes modificar y obtener los cambios yendo al PANEL ADMINISTRATIVO
-ten cuidado con los cambios que haces, pueden ser perjudiciales para la página y para todos los campos rellenados anteriormente </p>
+  <p>Estás logeado como ADMINISTRADOR de ésta Página, y como tal puedes modificar y obtener los cambios yendo al PANEL ADMINISTRATIVO. Ten cuidado con los cambios que haces, cada cambio afecta a la página y a todos los campos que rellenes y envies </p>
 {/if}
  </form>
